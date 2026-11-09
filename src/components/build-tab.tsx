@@ -29,6 +29,7 @@ import {
 import { getTrait, traits } from "@/data/traits";
 import { getMight, mightSkills } from "@/data/might";
 import { useCustomBuild } from "@/components/custom-build";
+import { asset } from "@/lib/asset";
 
 // Card colors for each grade (A green, S blue, SS purple, EX yellow)
 const GRADE_BADGE: Record<string, string> = {
@@ -111,7 +112,7 @@ function SafeImg({
   if (!src || failed) return <>{fallback}</>;
   return (
     <img
-      src={src}
+      src={asset(src)}
       alt={alt}
       className={className}
       onError={() => setFailed(true)}
@@ -129,7 +130,7 @@ function StatImg({
 }) {
   return (
     <SafeImg
-      src={`/icons/stats/${stat}.webp`}
+      src={asset(`/icons/stats/${stat}.webp`)}
       alt=""
       className={`${className} shrink-0 object-contain`}
       fallback={<span className={`${className} shrink-0`} />}
@@ -275,10 +276,10 @@ function StigmaPickerBody({
             }`}
           >
             <SafeImg
-              src={
+              src={asset(
                 set.pieces[piece.slot].icon ??
                 `/stigmas/${set.id}-${piece.slot}.webp`
-              }
+              )}
               alt=""
               className="h-14 w-14 shrink-0 object-contain"
               fallback={
@@ -373,7 +374,7 @@ function WeaponPickerBody({
             className={row(build.weapon?.id === w.id)}
           >
             <SafeImg
-              src={w.icon}
+              src={asset(w.icon)}
               alt=""
               className="h-14 w-14 shrink-0 object-contain"
               fallback={
@@ -805,7 +806,7 @@ function MightCard({ item, onChange }: { item: BuildMight; onChange?: () => void
       ) : (
         <div className="flex items-start gap-4">
           <SafeImg
-            src={m.icon ?? `/might/${m.id}.webp`}
+            src={asset(m.icon ?? `/might/${m.id}.webp`)}
             alt={m.name}
             className="h-16 w-16 shrink-0 object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]"
             fallback={
@@ -873,7 +874,7 @@ function MightPickerBody({
           className={row(m.id === current)}
         >
           <SafeImg
-            src={m.icon ?? `/might/${m.id}.webp`}
+            src={asset(m.icon ?? `/might/${m.id}.webp`)}
             alt=""
             className="h-12 w-12 shrink-0 object-contain"
             fallback={
@@ -931,7 +932,7 @@ function StigmaCard({
       {/* Piece image */}
       <div className="my-3 flex h-40 items-center justify-center rounded-lg bg-gradient-to-b from-white/5 to-black/40">
         <SafeImg
-          src={icon}
+          src={asset(icon)}
           alt={`${set?.name ?? s.set} ${s.slot}`}
           className="h-35 w-35 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)]"
           fallback={
@@ -1019,7 +1020,7 @@ function WeaponCard({
       {/* Big image */}
       <div className="relative flex h-50 items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-b from-white/5 to-black/40">
         <SafeImg
-          src={weapon.icon}
+          src={asset(weapon.icon)}
           alt={weapon.name}
           className="h-full w-full object-contain p-4 drop-shadow-[0_8px_16px_rgba(0,0,0,0.7)]"
           fallback={
@@ -1140,7 +1141,7 @@ function TraitCard({
       <div className="flex items-start justify-between gap-2">
         <div className="flex min-w-0 items-center gap-2">
           <SafeImg
-            src={t.icon ?? `/traits/${t.id}.webp`}
+            src={asset(t.icon ?? `/traits/${t.id}.webp`)}
             alt=""
             className="h-9 w-9 shrink-0 rounded-lg bg-black/30 object-contain p-0.5"
             fallback={

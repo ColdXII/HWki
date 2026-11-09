@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { asset } from "@/lib/asset";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export type Banner = {
@@ -38,7 +39,7 @@ export function BannerCarousel({ banners }: { banners: Banner[] }) {
       {banners.map((b, i) => (
         <img
           key={b.src}
-          src={b.src}
+          src={asset(b.src)}
           alt={b.alt}
           style={{ objectPosition: b.position ?? "center" }}
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${

@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "@/lib/asset";
+
 export type FilterOption = {
   value: string;
   label?: string;
@@ -66,7 +68,7 @@ export function FilterPanel({
                 >
                   {o.icon && (
                     <img
-                      src={o.icon}
+                      src={asset(o.icon)}
                       alt={o.value}
                       className="h-6 w-auto object-contain"
                     />

@@ -23,6 +23,7 @@ import {
 import { GRADES, type CharacterDetails, type Grade } from "@/data/types";
 import { calcStats, listStackControls } from "@/lib/calc-stats";
 import { useCustomBuild } from "@/components/custom-build";
+import { asset } from "@/lib/asset";
 
 // ===== ICONS =====
 // false = use the built-in icons below.
@@ -56,7 +57,7 @@ function StatIcon({ k }: { k: string }) {
     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-secondary">
       {USE_GAME_ICONS ? (
         <img
-          src={`/icons/stats/${k}.webp`}
+          src={asset(`/icons/stats/${k}.webp`)}
           alt=""
           className="h-5 w-5 object-contain"
         />
@@ -378,7 +379,7 @@ function GradeIcon({
   }
   return (
     <img
-      src={gradeIconSrc(grade)}
+      src={asset(gradeIconSrc(grade))}
       alt={grade}
       onError={() => setFailed(true)}
       className={`${className} object-contain`}

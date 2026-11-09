@@ -10,6 +10,7 @@ import {
 } from "@/data/types";
 import { label } from "@/lib/stat-labels";
 import { getTrait } from "@/data/traits";
+import { asset } from "@/lib/asset";
 import { Hourglass, Zap } from "lucide-react";
 
 const MAX_LEVEL = 10; // skills go from Lv 1 to Lv 10
@@ -86,7 +87,7 @@ function TraitImg({
     );
   return (
     <img
-      src={icon ?? `/traits/${id}.webp`}
+      src={asset(icon ?? `/traits/${id}.webp`)}
       alt=""
       onError={() => setFailed(true)}
       className="h-9 w-9 shrink-0 rounded-lg bg-black/30 object-contain p-0.5"
@@ -107,7 +108,7 @@ const Title = ({ children }: { children: ReactNode }) => (
 );
 
 // Demi-God icon: shows the first letter if the file is missing
-function DemiImg({ src, name }: { src: string; name: string }) {
+function DemiImg({ src, name }: { src?: string; name: string }) {
   const [failed, setFailed] = useState(false);
   const box =
     "h-12 w-12 shrink-0 rounded-xl border border-amber-500/40 bg-black/30";
@@ -121,7 +122,7 @@ function DemiImg({ src, name }: { src: string; name: string }) {
     );
   return (
     <img
-      src={src}
+      src={asset(src)}
       alt={name}
       onError={() => setFailed(true)}
       className={`${box} object-contain p-0.5`}
@@ -152,7 +153,7 @@ function DemiEffectCard({ effect }: { effect: DemiGodEffect }) {
     <div className="rounded-2xl border border-amber-500/40 bg-amber-500/5 p-4">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-3">
-          <DemiImg src={effect.icon ?? `/demigod/${slug}.webp`} name={effect.name} />
+          <DemiImg src={asset(effect.icon ?? `/demigod/${slug}.webp`)} name={effect.name} />
           <div className="leading-tight">
             <span className="rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-bold uppercase text-amber-300">
               Demi-God
@@ -272,7 +273,7 @@ export function SkillsTab({ details }: { details: CharacterDetails }) {
               >
                 {s.icon ? (
                   <img
-                    src={s.icon}
+                    src={asset(s.icon)}
                     alt=""
                     className="h-9 w-9 shrink-0 rounded-full object-cover"
                   />

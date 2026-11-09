@@ -23,6 +23,7 @@ import { STAT_LABEL, label } from "@/lib/stat-labels";
 import { getTrait } from "@/data/traits";
 import { weapons, uniqueLines, mainStats } from "@/data/weapons";
 import { getGift } from "@/data/gifts";
+import { asset } from "@/lib/asset";
 import { ProfilePvSection } from "@/components/pv-embed";
 
 // ===== NAMES AND HELPERS =====
@@ -89,7 +90,7 @@ const isBest = (grade: GiftGrade, value: number) =>
   (grade === "gray" || grade === "green") && value === GIFT_RANGE[grade].max;
 
 // Gift icon: shows the first letter if the file is missing
-function GiftImg({ src, name }: { src: string; name: string }) {
+function GiftImg({ src, name }: { src?: string; name: string }) {
   const [failed, setFailed] = useState(false);
   if (failed)
     return (
@@ -99,7 +100,7 @@ function GiftImg({ src, name }: { src: string; name: string }) {
     );
   return (
     <img
-      src={src}
+      src={asset(src)}
       alt={name}
       onError={() => setFailed(true)}
       className="h-full w-full object-contain p-2"
@@ -143,7 +144,7 @@ export function ProfileTab({
         <div className="relative overflow-hidden rounded-2xl border border-border bg-card/60">
           {char.portrait ? (
             <img
-              src={char.portrait}
+              src={asset(char.portrait)}
               alt={char.name}
               className="aspect-[3/4] w-full object-cover object-top"
             />
@@ -162,7 +163,7 @@ export function ProfileTab({
           <Title>Information</Title>
           <Fact label="Rarity">
             <img
-              src={`/icons/rarity/${char.rarity.toLowerCase()}.webp`}
+              src={asset(`/icons/rarity/${char.rarity.toLowerCase()}.webp`)}
               alt={char.rarity}
               className="h-7 w-7 object-contain"
             />
@@ -201,7 +202,7 @@ export function ProfileTab({
                       className={`relative flex h-16 items-center justify-center rounded-xl border bg-gradient-to-b to-black/40 ${GIFT_TILE[gift.grade]}`}
                     >
                       <GiftImg
-                        src={gift.icon ?? `/gifts/${gift.id}.webp`}
+                        src={asset(gift.icon ?? `/gifts/${gift.id}.webp`)}
                         name={gift.name}
                       />
                       <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full border border-white/20 bg-black/85 px-1 text-[11px] font-bold tabular-nums">
@@ -317,7 +318,7 @@ export function ProfileTab({
             <div className="flex flex-col gap-4 md:flex-row md:items-start">
               {weapon.icon && (
                 <img
-                  src={weapon.icon}
+                  src={asset(weapon.icon)}
                   alt={weapon.name}
                   className="h-64 w-full rounded-xl border border-border bg-gradient-to-b from-white/5 to-black/40 object-contain p-4 drop-shadow-[0_8px_16px_rgba(0,0,0,0.7)] md:h-80 md:w-64 md:shrink-0"
                 />

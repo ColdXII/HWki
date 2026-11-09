@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { characters } from "@/data/characters";
 import { Input } from "@/components/ui/input";
+import { asset } from "@/lib/asset";
 import { FilterPanel, type FilterRow } from "@/components/filter-panel";
 
 // ===== CARD STYLE PER RARITY =====
@@ -269,7 +270,7 @@ export default function CharactersPage() {
               <div className="relative aspect-[3/4] bg-gradient-to-b from-black/20 to-black/40">
                 {char.portrait ? (
                   <img
-                    src={char.portrait}
+                    src={asset(char.portrait)}
                     alt={char.name}
                     className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                   />
@@ -283,7 +284,7 @@ export default function CharactersPage() {
                 {/* Rarity icon, top left */}
                 <div className="absolute left-2 top-2">
                   <img
-                    src={rarityIcons[char.rarity]}
+                    src={asset(rarityIcons[char.rarity])}
                     alt={char.rarity}
                     className="h-10 w-10 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
                   />

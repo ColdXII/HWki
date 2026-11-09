@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Check, Copy, Ticket } from "lucide-react";
 import { codes, type RedeemCode } from "@/data/codes";
+import { asset } from "@/lib/asset";
 
 // Copies text. The second part is a fallback for phones that block the first way.
 async function copyText(text: string) {
@@ -45,12 +46,12 @@ const fmtDate = (d: string) =>
   });
 
 // Reward icon: shows nothing if the file is missing
-function RewardImg({ src }: { src: string }) {
+function RewardImg({ src }: { src?: string }) {
   const [failed, setFailed] = useState(false);
   if (failed) return null;
   return (
     <img
-      src={src}
+      src={asset(src)}
       alt=""
       onError={() => setFailed(true)}
       className="h-5 w-5 object-contain"
@@ -147,7 +148,7 @@ function CodeCard({
               key={i}
               className="flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 text-xs"
             >
-              {r.icon && <RewardImg src={r.icon} />}
+              {r.icon && <RewardImg src={asset(r.icon)} />}
               <span>{r.name}</span>
               <span className="font-bold tabular-nums text-amber-300">
                 ×{r.amount.toLocaleString("en-US")}

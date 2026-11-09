@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Character } from "@/data/characters";
 import type { PvLink, Skin, SkinSource } from "@/data/types";
 import { PvEmbed } from "@/components/pv-embed";
+import { asset } from "@/lib/asset";
 
 // An image that shows a placeholder if the file is missing,
 // instead of the ugly broken-image icon
@@ -22,7 +23,7 @@ function SafeImg({
   if (!src || failed) return <>{fallback}</>;
   return (
     <img
-      src={src}
+      src={asset(src)}
       alt={alt}
       className={className}
       onError={() => setFailed(true)}
@@ -168,7 +169,7 @@ export function SkinViewer({
               <div className="relative aspect-[3/4] bg-gradient-to-b from-white/5 to-black/40">
                 <SafeImg
                   key={l.portrait}
-                  src={l.portrait}
+                  src={asset(l.portrait)}
                   alt={l.name}
                   className="h-full w-full object-cover object-top"
                   fallback={
@@ -198,7 +199,7 @@ export function SkinViewer({
                     // Shop skin: currency icon on the left, then the price
                     <p className="mt-1 flex items-center gap-1 text-xs font-semibold text-yellow-300">
                       <img
-                        src={CURRENCY_ICON}
+                        src={asset(CURRENCY_ICON)}
                         alt=""
                         className="h-4 w-4 object-contain"
                       />
@@ -308,7 +309,7 @@ export function SkinViewer({
             >
               <SafeImg
                 key={image}
-                src={image}
+                src={asset(image)}
                 alt={`${char.name} - ${current.name}`}
                 className="pointer-events-none h-full w-auto max-w-full object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
                 fallback={<p className="text-muted-foreground">No image yet</p>}
@@ -460,7 +461,7 @@ export function SkinViewer({
                       {s.type === "shop" && s.price !== undefined && (
                         <span className="flex items-center gap-1 font-semibold text-yellow-300">
                           <img
-                            src={CURRENCY_ICON}
+                            src={asset(CURRENCY_ICON)}
                             alt=""
                             className="h-4 w-4 object-contain"
                           />

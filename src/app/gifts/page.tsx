@@ -5,6 +5,7 @@ import { Crown, Gift, Search, Star } from "lucide-react";
 import { characters } from "@/data/characters";
 import { getDetails } from "@/data/details";
 import { gifts, getGift } from "@/data/gifts";
+import { asset } from "@/lib/asset";
 import { GIFT_GRADES, GIFT_RANGE, type GiftGrade } from "@/data/types";
 
 // Tile colors for each gift grade
@@ -48,17 +49,18 @@ const isBest = (grade: GiftGrade, value: number) =>
   grade !== "purple" && value === GIFT_RANGE[grade].max;
 
 // Gift icon: shows the first letter if the file is missing
-function GiftImg({ src, name }: { src: string; name: string }) {
+function GiftImg({ src, name }: { src?: string; name: string }) {
   const [failed, setFailed] = useState(false);
-  if (failed)
+  if (!src || failed) {
     return (
       <span className="text-3xl font-bold text-muted-foreground/40">
         {name.charAt(0)}
       </span>
     );
+  }
   return (
-    <img
-      src={src}
+    <img 
+      src={asset(src)}
       alt={name}
       onError={() => setFailed(true)}
       className="h-full w-full object-contain p-2 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]"
@@ -170,7 +172,7 @@ export default function GiftsPage() {
               <div className="flex shrink-0 items-center gap-4 bg-gradient-to-br from-primary/20 to-transparent p-4 sm:w-56 sm:flex-col sm:items-start">
                 {c.portrait ? (
                   <img
-                    src={c.portrait}
+                    src={asset(c.portrait)}
                     alt={c.name}
                     className="h-35 w-35 rounded-2xl object-cover object-top ring-2 ring-white/10"
                   />
@@ -208,7 +210,7 @@ export default function GiftsPage() {
                         className={`relative flex h-30 items-center justify-center rounded-2xl border bg-gradient-to-b to-black/40 shadow-lg ${TILE[gift.grade]}`}
                       >
                         <GiftImg
-                          src={gift.icon ?? `/gifts/${gift.id}.webp`}
+                          src={asset(gift.icon ?? `/gifts/${gift.id}.webp`)}
                           name={gift.name}
                         />
                         {/* Value */}

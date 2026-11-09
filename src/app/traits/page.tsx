@@ -4,6 +4,7 @@ import { memo, useMemo, useState } from "react";
 import { traits } from "@/data/traits";
 import type { Trait, TraitEffect } from "@/data/types";
 import { label } from "@/lib/stat-labels";
+import { asset } from "@/lib/asset";
 
 const PAGE_SIZE = 60;
 
@@ -132,7 +133,7 @@ function TraitImg({
   }
   return (
     <img
-      src={icon ?? `/traits/${id}.webp`}
+      src={asset(icon ?? `/traits/${id}.webp`)}
       alt=""
       onError={() => setFailed(true)}
       className="h-9 w-9 shrink-0 rounded-lg bg-black/30 object-contain p-0.5"

@@ -69,10 +69,11 @@ All images are optional. A missing file shows a letter placeholder instead of a 
 | Stat icons | `/icons/stats/<stat>.webp` (for example `meleeAtk.webp`) |
 | Stigma pieces | `/stigmas/<set-id>-<slot>.webp` (`top`, `left`, `right`, `bottom`) |
 | Weapons | the `icon` field in `weapons.ts` |
-| Traits | `/traits/<trait-id>.webp` |
-| Gifts | `/gifts/<gift-id>.webp` |
-| Might Skills | `/might/<id>.webp` |
-| Demi-God effects | `/demigod/<effect-name>.webp` |
+| Skills | the `icon` field in `<character-id>.ts` |
+| Traits | the `icon` field in `<traits-id>.ts` |
+| Gifts | `/icons/gifts/<gift-id>.webp` |
+| Might Skills | `/icons/might/<id>.webp` |
+| Demi-God effects | the `icon` field in `<character-id>.ts` |
 | Banners | `/banners/*.webp` |
 
 ## How stats are calculated

@@ -8,6 +8,7 @@ import {
   type StigmaGrade,
   type StigmaSlot,
 } from "@/data/types";
+import { asset } from "@/lib/asset";
 import { STAT_LABEL, label } from "@/lib/stat-labels";
 
 const SLOTS: StigmaSlot[] = ["top", "left", "bottom", "right"];
@@ -34,20 +35,21 @@ function PieceImg({
   alt,
   slot,
 }: {
-  src: string;
+  src?: string;
   alt: string;
   slot: string;
 }) {
   const [failed, setFailed] = useState(false);
-  if (failed)
+  if (!src || failed) {
     return (
       <span className="text-3xl font-bold uppercase text-muted-foreground/30">
         {slot.charAt(0)}
       </span>
     );
+  }
   return (
-    <img
-      src={src}
+    <img 
+      src={asset(src)}
       alt={alt}
       onError={() => setFailed(true)}
       className="h-20 w-20 object-contain drop-shadow-[0_6px_12px_rgba(0,0,0,0.7)] transition group-hover:scale-110"
@@ -171,10 +173,10 @@ export default function StigmaPage() {
                       className={`flex h-24 w-full items-center justify-center bg-gradient-to-b to-transparent ${GLOW[set.grade]}`}
                     >
                       <PieceImg
-                        src={
+                        src={asset(
                           set.pieces[slot].icon ??
                           `/stigmas/${set.id}-${slot}.webp`
-                        }
+                        )}
                         alt={`${set.name} ${slot}`}
                         slot={slot}
                       />

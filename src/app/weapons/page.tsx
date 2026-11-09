@@ -4,6 +4,7 @@ import { useState } from "react";
 import { weapons, uniqueLines, mainStats } from "@/data/weapons";
 import { WEAPON_TYPES } from "@/data/types";
 import { STAT_LABEL, label } from "@/lib/stat-labels";
+import { asset } from "@/lib/asset";
 
 const GRADES = ["EX", "SS", "S", "A"];
 
@@ -107,7 +108,7 @@ export default function WeaponsPage() {
             <div className="relative flex h-44 items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-b from-white/5 to-black/40">
               {w.icon ? (
                 <img
-                  src={w.icon}
+                  src={asset(w.icon)}
                   alt={w.name}
                   className="h-full w-full object-contain p-3 drop-shadow-[0_8px_16px_rgba(0,0,0,0.7)]"
                 />

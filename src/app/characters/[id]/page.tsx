@@ -9,6 +9,7 @@ import { SkillsTab } from "@/components/skills-tab";
 import { StatsTab } from "@/components/stats-tab"; // Edit 1
 import { getDetails } from "@/data/details"; // Edit 1
 import { CustomBuildProvider } from "@/components/custom-build";
+import { asset } from "@/lib/asset";
 
 // Tells Next.js to build one page for every character
 export function generateStaticParams() {
@@ -50,7 +51,7 @@ export default async function CharacterPage({
       {/* Header: rarity icon, name, and cost */}
       <div className="flex items-end gap-4">
         <img
-          src={`/icons/rarity/${char.rarity.toLowerCase()}.webp`}
+          src={asset(`/icons/rarity/${char.rarity.toLowerCase()}.webp`)}
           alt={char.rarity}
           className="h-16 w-16 object-contain"
         />
