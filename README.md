@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HWki
 
-## Getting Started
+An unofficial fan wiki for **Horizon Walker**: vanguards, weapons, traits, stigmas, gifts and redeem codes. Built with Next.js and exported as a static site, so it can be hosted for free.
 
-First, run the development server:
+> Fan project. It is not affiliated with the game's developer or publisher. Game names, art and text belong to their owners.
+
+## Features
+
+- **Vanguards**: searchable list with filters (rarity, cost, base ATK, damage type), sorting, and a toggle for B units
+- **Character pages** with tabs:
+  - **Build**: preset builds (weapon, 4 stigmas, general traits, Might Skills) with a **Custom** build where visitors swap pieces
+  - **Profile**: facts, story, exclusive weapon, liked gifts, unique traits
+  - **Skills**: skills with level selector, damage types in color, Demi-God Ascension toggle
+  - **Stats**: Pure Stats and per-build stats, grade (B to EX6) and level (1 to 60), radar chart, Combat mode
+  - **Skin**: skin viewer with zoom, censored versions and how to get each skin
+- **Weapons**, **Traits**, **Stigma** and **Gifts** pages with search and filters
+- **Redeem codes** with automatic expiry and tap to copy, also shown on the Home page
+- **Home page** banner carousel that reads every `.webp` in `public/banners`
+- **Editor** (`/editor`, local only) that writes ready-to-paste code for new data
+
+## Tech stack
+
+Next.js (App Router) · React · TypeScript · Tailwind CSS · shadcn/ui · lucide-react
+
+## Getting started
+
+Needs **Node.js 20.9 or newer**.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static site in the out/ folder
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/            pages (home, characters, weapons, traits, stigma, gifts, codes)
+  components/     tabs, cards, filter panel, carousel
+  data/           all the wiki data (see below)
+  lib/calc-stats.ts   the stat calculator
+public/           images
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Data files (`src/data`)
 
-## Learn More
+| File | What it holds |
+|---|---|
+| `types.ts` | All types and shared constants (grades, stat keys, ranges) |
+| `characters.ts` | One entry per vanguard for the list: name, rarity, cost, title, images |
+| `details/<id>.ts` | The heavy data for one vanguard: basic stats, grade gains, traits, skills, builds, skins, profile, gifts, Demi-God |
+| `details/index.ts` | Connects each id to its details file |
+| `traits.ts` | Every trait, written once and shared |
+| `weapons.ts` | Every weapon |
+| `stigmas.ts` | Stigma sets (SS and EX versions are separate entries) |
+| `gifts.ts` | Gift items and their grades |
+| `mightSkills.ts` | The shared Might Skill list |
+| `codes.ts` | Redeem codes |
 
-To learn more about Next.js, take a look at the following resources:
+### Image paths
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All images are optional. A missing file shows a letter placeholder instead of a broken icon.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Image | Path |
+|---|---|
+| Portrait / full body | `/characters/<id>-portrait.webp`, `/characters/<id>-full.webp` |
+| Rarity icons | `/icons/rarity/ex.webp`, `ss.webp`, `s.webp`, `a.webp`, `b.webp` |
+| Stat icons | `/icons/stats/<stat>.webp` (for example `meleeAtk.webp`) |
+| Stigma pieces | `/stigmas/<set-id>-<slot>.webp` (`top`, `left`, `right`, `bottom`) |
+| Weapons | the `icon` field in `weapons.ts` |
+| Traits | `/traits/<trait-id>.webp` |
+| Gifts | `/gifts/<gift-id>.webp` |
+| Might Skills | `/might/<id>.webp` |
+| Demi-God effects | `/demigod/<effect-name>.webp` |
+| Banners | `/banners/*.webp` |
 
-## Deploy on Vercel
+## How stats are calculated
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The calculator (`src/lib/calc-stats.ts`) was worked out from in-game screenshots, so it can be off for some units.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ATK, Evade and Accuracy: basic stat × a level multiplier (1 at Lv 1, 12.8 at Lv 60)
+- Max HP: Vitality × a level multiplier (5 at Lv 1, 64 at Lv 60)
+- All percent bonuses are added together, then applied once
+- Weapon ATK is multiplied by (basic stat ÷ 10) and added before the percents
+- Crit Rate and Crit DMG add as points to 10 and 150
+- **Pure Stats**: no weapon and no general traits; unique traits and max affection count
+- **Build stats**: adds the build's weapon, stigmas and general traits
+- **Combat mode**: also counts battle-only effects and stigma set bonuses
+
+## Deploying
+
+The site is a static export (`output: "export"` in `next.config.ts`), so any static host works. Cloudflare Pages settings:
+
+| Setting | Value |
+|---|---|
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Environment variable | `NODE_VERSION` = `20` (or newer) |
+
+## License
+
+The code is released under the [MIT License](LICENSE).
+
+The MIT license covers the code only. Game names, art, icons, text and data belong to their owners and are not covered by it.
+
+## Status
+
+Work in progress.
