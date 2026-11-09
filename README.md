@@ -2,7 +2,7 @@
 
 An unofficial fan wiki for **Horizon Walker**: vanguards, weapons, traits, stigmas, gifts and redeem codes. Built with Next.js and exported as a static site, so it can be hosted for free.
 
-> Fan project. It is not affiliated with the game's developer or publisher. Game names, art and text belong to their owners.
+> Fan project (Vibe Coding). It is not affiliated with the game's developer or publisher. Game names, art and text belong to their owners.
 
 ## Features
 
@@ -16,7 +16,6 @@ An unofficial fan wiki for **Horizon Walker**: vanguards, weapons, traits, stigm
 - **Weapons**, **Traits**, **Stigma** and **Gifts** pages with search and filters
 - **Redeem codes** with automatic expiry and tap to copy, also shown on the Home page
 - **Home page** banner carousel that reads every `.webp` in `public/banners`
-- **Editor** (`/editor`, local only) that writes ready-to-paste code for new data
 
 ## Tech stack
 
@@ -91,7 +90,7 @@ The calculator (`src/lib/calc-stats.ts`) was worked out from in-game screenshots
 
 ## Deploying
 
-The site is a static export (`output: "export"` in `next.config.ts`), so any static host works. Cloudflare Pages settings:
+The site is a static export (`output: "export"` in `next.config.ts`).
 
 | Setting | Value |
 |---|---|
@@ -105,6 +104,9 @@ The code is released under the [MIT License](LICENSE).
 
 The MIT license covers the code only. Game names, art, icons, text and data belong to their owners and are not covered by it.
 
-## Status
+## Work In Progress
 
-Work in progress.
+- Adding Missing Icon.
+- Effect Page
+- Add Stigma, Some Trait & Demigod stat to stats calculator
+- UI for Mobile
