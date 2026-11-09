@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+}
+
+:root {
+  --background: 240 20% 5%; /* very dark navy */
+  --foreground: 210 30% 96%;
+
+  --card: 240 18% 8%;
+  --card-foreground: 210 30% 96%;
+
+  --popover: 240 18% 8%;
+  --popover-foreground: 210 30% 96%;
+
+  /* Main accent - Horizon Walker purple/magenta */
+  --primary: 280 75% 65%;
+  --primary-foreground: 240 20% 5%;
+
+  --secondary: 240 15% 17%;
+  --secondary-foreground: 210 30% 96%;
+
+  --muted: 240 15% 13%;
+  --muted-foreground: 220 15% 68%;
+
+  --accent: 240 15% 15%;
+  --accent-foreground: 210 30% 96%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 240 12% 22%;
+  --input: 240 12% 16%;
+  --ring: 280 75% 65%;
+
+  --radius: 0.75rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
