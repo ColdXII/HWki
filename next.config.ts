@@ -7,8 +7,8 @@ const base = isProd ? `/${repoName}` : '';
 const nextConfig: NextConfig = {
   output: 'export',
 
-  basePath: base,
-  assetPrefix: isProd ? `${base}/` : '',
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
 
   env: { 
     NEXT_PUBLIC_BASE_PATH: base 
