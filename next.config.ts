@@ -1,24 +1,14 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'HWki';
-const base = isProd ? `/${repoName}` : '';
+const isProd = process.env.NODE_ENV === "production";
+const base = isProd ? "/HWki" : "";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-
-  basePath: '/HWki',
-  assetPrefix: '/HWki/',
-
-  env: { 
-    NEXT_PUBLIC_BASE_PATH: base 
-  },
-
-  images: {
-    unoptimized: true,
-  },
-
+  output: "export",
+  basePath: base,
+  images: { unoptimized: true },
   trailingSlash: true,
+  env: { NEXT_PUBLIC_BASE_PATH: base },
 };
 
 export default nextConfig;
