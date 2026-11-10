@@ -98,15 +98,16 @@ The site is a static export (`output: "export"` in `next.config.ts`).
 | Build output directory | `out` |
 | Environment variable | `NODE_VERSION` = `20` (or newer) |
 
-## License
-
-The code is released under the [MIT License](LICENSE).
-
-The MIT license covers the code only. Game names, art, icons, text and data belong to their owners and are not covered by it.
-
 ## Work In Progress
 
 - Adding Missing Icon.
 - Effect Page
 - Add Stigma, Some Trait & Demigod stat to stats calculator
 - UI for Mobile
+
+## License
+HWki is an unofficial, fan-made wiki for Horizon Walker. It is not affiliated with, endorsed by, or sponsored by the game's developers or publishers.
+
+The [MIT License](LICENSE) applies to the original code of this project only. All Horizon Walker related intellectual property, including but not limited to game names, characters, artwork, illustrations, icons, audio, music, text, and in-game data, remains the property of their respective owners and is not covered by this license.
+
+All game-related materials are used for informational and fan-reference purposes. If you are a respective rights holder and have concerns regarding any content featured on this website, please contact the repository owner.
