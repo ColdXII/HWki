@@ -282,9 +282,9 @@ export const osla: CharacterDetails = {
   basic: { str: 14, tec: 8, int: 6, vit: 11, agi: 9 },
 
   gradeGains: {
-    B: { str: 1 },
-    A: { vit: 1 },
-    S: { str: 1 },
+    B: { str: -1 },
+    A: { vit: -1 },
+    S: { str: -1 },
     EX: { vit: 1 },
     EX1: { str: 2 },
     EX2: { str: 1 },

@@ -186,6 +186,7 @@ export const weapons: Weapon[] = [
           ]
         },
       },
+    
     // == Cora ==
       {
         id: "orbina",
@@ -227,6 +228,45 @@ export const weapons: Weapon[] = [
           ]
         },
       },
+    // == Dorothea ==
+      {
+        id: "wail-of-the-vengeful-dead",
+        name: "Wail of the Vengeful Dead",
+        grade: "EX",
+        type: "Two-handed Blunt",
+        icon: "/weapons/wail-of-the-vengeful-dead.webp",
+
+        mainStat: { stat: "meleeAtk", type: "flat", value: { lv1: 12.1, lv60: 77 } },
+        subStats: [{ stat: "crushBoost", type: "percent", value: { lv1: 7.7, lv60: 49 } }],
+
+        unique: {
+          name: "Vengeful Spirit's Curse",
+          description: `Increases SPD by {spd}% during combat.
+          On attack, applies [Vengeful Spirit's Curse] to the enemy for 3R.
+
+          - [Vengeful Spirit's Curse]: Reduces Crush DEF by {crushDef}. Stacks up to 20 times.`,
+          values: { 
+            spd: [100, 150, 200, 250, 300],
+            crushDef: [30, 35, 40, 45, 50],
+          },
+          effects: [
+            { stat: "spd", type: "percent", valueKey: "spd", battleOnly: true },
+            // { stat: "crushDef", type: "flat", valueKey: "crushDef", maxStacks: 20, stackKey: "vs-curse", stackLabel: "Vengeful Spirit's Curse", battleOnly: true },
+          ]
+        },
+
+        exclusive: {
+          characterId: "dorothea",
+          name: "Dorothea Signature: Land of Vengeful Spirit's",
+          description: `Gains 15 AP with each attack.
+          At the start of any unit's turn, applies [Soul-Shackling Curse] to enemies affected by [Blood Curse] for 3R.
+
+          - [Soul-Shackling Curse]: Reduces Crush DEF by 200. Stacks up to 10 times.`,
+          effects: [
+            // { stat: "crushDef", type: "flat", value: 45, maxStacks: 10, stackKey: "ss-curse", stackLabel: "Soul-Shackling Curse", battleOnly: true },
+          ]
+        },
+      },  
     // == Echidna ==
       {
         id: "scales-of-blight",
@@ -1282,23 +1322,28 @@ export const weapons: Weapon[] = [
         icon: "/weapons/the-black-idol.webp",
 
         mainStat: { stat: "magicAtk", type: "flat", value: { lv1: 12.1, lv60: 77 } },
-        subStats: [{ stat: "maxHp", type: "percent", value: { lv1: 7.7, lv60: 49 } }],
+        subStats: [{ stat: "apRecovery", type: "percent", value: { lv1: 3.1, lv60: 19.6 } }],
 
         unique: {
           name: "Dark Guardianship",
-          description: `During battle, increases Magic ATK by {magicAtk}% of Max HP.
-          Recovers {recoverHp}% of HP each time an enemy on the battlefield is defeated.`,
+          description: `During battle, increases Immaterial Boost by {buff}%.
+          During battle, increases AP Recovery by {buff}.
+          
+          At the start of each round, grants all allies Shields equal to {buff}% of Magic ATK`,
           values: { 
-            magicAtk: [12, 15, 18, 21, 24],
-            recoverHp: [12, 15, 18, 21, 24],
+            buff: [10, 20, 30, 40, 50],
           },
-          effects: []
+          effects: [
+            { stat: "immaterialBoost", type: "percent", valueKey: "buff", battleOnly: true },
+            { stat: "apRecovery", type: "flat", valueKey: "buff", battleOnly: true },
+          ]
         },
 
         exclusive: {
           characterId: "min_eun_sol",
           name: "Min Eun-sol Signature: Black Pulse",
-          description: `At the start of any turn, if you have the [King's Favor] effect, all allies except yourself gain 1000 to All DEF for the duration of the turn.`,
+          description: `From the start of the end of any unit's turn, increases Min Eun-sol's Magic ATK by 100% of the combined Shield values of all allies.
+          At the end of your turn, deals Fixed DMG to allies with Shields equal to their respective Shield values.`,
           effects: []
         },
       },

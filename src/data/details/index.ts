@@ -6,6 +6,7 @@ import { berga } from "./berga";
 import { canisk } from "./canisk";
 import { cora } from "./cora";
 import { delia } from "./delia";
+import { dorothea } from "./dorothea";
 import { echidna } from "./echidna";
 import { efreeti } from "./efreeti";
 import { emilia } from "./emilia";
@@ -95,6 +96,7 @@ const details: Record<string, CharacterDetails> = {
   canisk: canisk,
   cora: cora,
   delia: delia,
+  dorothea: dorothea,
   echidna: echidna,
   efreeti: efreeti,
   emilia: emilia,

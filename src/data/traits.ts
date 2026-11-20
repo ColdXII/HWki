@@ -383,6 +383,30 @@ export const traits: Trait[] = [
         - [Comfort Zone Breach]: SPD decreases by 3% (Personal space is a thing, you know...)`,
         effects: [],
       },
+    // == Dorothea ==
+      {
+        id: "spot-me-ancestor",
+        name: "Spot Me, Ancestor!",
+        kind: "unique",
+        icon: "/icons/stats/body.webp",
+        description: `Weak Point Angle -70º
+        Ignores Counterattacks until the end of the turn after using a skill
+        Strength 5
+        Vitality 5`,
+        effects: [
+          { stat: "str", type: "flat", value: 5 },
+          { stat: "vit", type: "flat", value: 5 },
+        ],
+      },
+      {
+        id: "the-thrill-of-battle",
+        name: "The Thrill of Battle",
+        kind: "unique",
+        icon: "/icons/stats/bodyheal.webp",
+        description: `Whenever an enemy is pushed or pulled, restores HP equal to 10% of missing HP.
+        Converts the Slash DMG dealt by [Hide Splitter] and [Predatory Range] into Crush DMG`,
+        effects: [],
+      },
     // == Echidna ==
       {
         id: "distroted-wish",
@@ -1800,19 +1824,23 @@ export const traits: Trait[] = [
         icon: "/icons/stats/flower.webp",
         description: `Activates Level 1 Passive Skill [Wholehearted].
 
-        [Wholehearted]: Looks solely towards the Human God with blind devotion.
-        If deployed with the Human God, decreases Evasion by 10% but increases Magic ATK by 15%.`,
+        [Wholehearted]: Her eyes are fixed solely on the Human God in blind devotion.
+        When deployed alongside the Human God, increases Crit Rate by 100% and Magic ATK by 150%.`,
         effects: [
         ],
       },
       {
-        id: "mental-bulwark",
-        name: "Mental Bulwark",
+        id: "the-sacrifice-unleashed",
+        name: "The Sacrifice Unleashed",
         kind: "unique",
         icon: "/icons/stats/bulwark.webp",
-        description: `Activates Level 1 Passive Skill [Mental Bulwark].
-
-        [Mental Bulwark]: During battle, increase All allies Heat, Cold, Electric, Poison, Immaterial DEF by 50.`,
+        description: `When the Human God dies, Min Eun-sol's mind collapses, allowing demonic power to take control of her body.
+        After the Human God's death, performs an Additional Response using [Breaking Point]. Using [Breaking Point] grants [Mental Breakdown].
+        
+        - [Mental Breakdown]: For 5 turns, HP cannot fall below 1, AP is fixed at 1000, and Magic ATK, Crit Rate, and Crit DMG increase by 300%.
+        While this effect is active, the Human God cannot issue commands, and Min Eun-sol fights on her own.
+        
+        Performs an Additional Response using [The Gaze of the Dark King]. Dies instantly when [Mental Breakdown] ends.`,
         effects: [
         ],
       },

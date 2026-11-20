@@ -16,44 +16,58 @@ export const min_eun_sol: CharacterDetails = {
         },
       ],
     },
+    {
+      id: "mineunsol-s2",
+      name: "???",
+      portrait: "/characters/mineunsol/mineunsol-s2p.webp",
+      fullBody: "/characters/mineunsol/mineunsol-s2.webp",
+      fullBodyCensored: "/characters/mineunsol/mineunsol-s2c.webp",
+      sources: [
+        {
+          type: "shop",
+          price: 500,
+          available: true,
+        },
+      ],
+    },
   ],
 
   builds: [
     {
       id: "late-game",
       name: "Late Game",
-      note: "Substats Priority: \n1. Max HP\n2. AP Recovery\n3. Magic Attack",
+      note: "Substats Priority: \n1. AP Recovery\n2. Magic Attack",
       weapon: { id: "the-black-idol", level: 60, dupe: 5 },
       stigmas: [
         {
           set: "reckoning-of-sin-ex", slot: "top", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
             { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
         {
           set: "reckoning-of-sin-ex", slot: "left", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
             { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
         {
           set: "reckoning-of-sin-ex", slot: "bottom", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
             { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
         {
           set: "reckoning-of-sin-ex", slot: "right", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
             { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
@@ -63,38 +77,38 @@ export const min_eun_sol: CharacterDetails = {
     {
       id: "mid-game",
       name: "Mid Game",
-      note: "Substats Priority: \n1. Max HP\n2. AP Recovery\n3. Magic Attack",
+      note: "Substats Priority: \n1. AP Recovery\n2. Magic Attack",
       weapon: { id: "the-black-idol", level: 60, dupe: 5 },
       stigmas: [
         {
           set: "reckoning-of-sin-ss", slot: "top", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
             { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
         {
           set: "reckoning-of-sin-ss", slot: "left", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
             { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
         {
           set: "reckoning-of-sin-ss", slot: "bottom", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
             { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
         {
           set: "reckoning-of-sin-ss", slot: "right", level: 25,
           subs: [
-            { stat: "maxHp", type: "percent", value: 5 },
-            { stat: "maxHp", type: "percent", value: 5 },
+            { stat: "apRecovery", type: "percent", value: 2 },
+            { stat: "apRecovery", type: "percent", value: 2 },
             { stat: "magicAtk", type: "percent", value: 5 },
           ],
         },
@@ -108,15 +122,13 @@ export const min_eun_sol: CharacterDetails = {
       id: "mental-shock",
       name: "Mental Shock",
       type: "Active",
-      ap: 60,
+      ap: 30,
       cooldown: 0,
       icon: "/skills/mineunsol/ba.webp",
-      description: `Inflicts an unavoidable attack by shocking the enemy's mind.
-      Deals Immaterial DMG equal to {damage}% of Magic ATK and reduces the target's AP by 5.
-      If the target has the [One Who Disturbed the King's Offering] effect, deals an Additional Immaterial DMG equal to {damage2}% of Magic ATK.`,
+      description: `Shocks the enemy's mind with an unblockable attack.
+      Deals Immaterial DMG equal to {damage}% of Magic ATK.`,
       damage: [
-        { stat: "magicAtk", percent: [50, 55, 60, 65, 70, 75, 80, 85, 90, 95], damageType: "Immaterial" },
-        { stat: "magicAtk", percent: [70, 77, 84, 91, 98, 105, 112, 119, 126, 133], damageType: "Immaterial" },
+        { stat: "magicAtk", percent: [60, 66, 72, 78, 84, 90, 96, 102, 108, 114], damageType: "Immaterial" },
       ],
     },
     {   
@@ -125,41 +137,34 @@ export const min_eun_sol: CharacterDetails = {
       type: "Passive",
       icon: "/skills/mineunsol/p1.webp",
       description: `"This creature is the offering of the Dark King, and none shall covet it."
-      When attacked by an enemy, deals Additional Immaterial DMG equal to {damage}% of Magic ATK to the target and applies [One Who Disturbed the King's Offering] for 2 rounds.
 
-      - [One Who Disturbed the King's Offering]: Reduces AP recovery by {apRecovery}% and reduces All ATK by {allAtk}%.`,
-      damage: { stat: "magicAtk", percent: [25, 27, 30, 32, 35, 38, 41, 44, 47, 50], damageType: "Immaterial" },
+      At the start of each round, increases the Human God's All ATK and Immaterial Boost by {buff}% for 1R.
+      From the start to the end of any unit's turn, increases Min Eun-sol's Magic ATK by the sum of the Human God's ATK stats.`,
       values: {
-        apRecovery: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
-        allAtk: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+        buff: [100, 110, 120, 130, 140, 150, 160, 170, 180, 190],
       },
     },
     {
       id: "devour-will",
       name: "Devour Will",
       type: "Active",
-      ap: 30,
-      cooldown: 1,
+      ap: 45,
+      cooldown: 0,
       icon: "/skills/mineunsol/s1.webp",
-      description: `The authority of the Dark King devours the enemy's will to survive. Deals unblockable Magic ATK equal to {damage}% as Immaterial DMG to an enemy, inflicting [Devour Will] for 2R and [Taunt].
-
-      - [Devour Will]: Reduces Evade by {evade}% and makes Counterattack impossible.`,
-      damage: { stat: "magicAtk", percent: [30, 33, 36, 39, 42, 45, 48, 51, 54, 57], damageType: "Immaterial" },
-      values: {
-        evade: [40, 44, 48, 52, 56, 60, 64, 68, 72, 76],
-      },
+      description: `The Dark King's power devours the enemy's will to survive.
+      Deals Immaterial DMG equal to {damage}% of Magic ATK to the enemy and applies [Loss of Will] for 1R.
+      
+      - [Loss of Will]: Reduces AP by 5 and prevents Evades and Counterattacks.`,
+      damage: { stat: "magicAtk", percent: [120, 132, 144, 156, 168, 180, 192, 204, 216, 228], damageType: "Immaterial" },
     },
-    {   
+    {
       id: "kings-favor",
       name: "King's Favor",
       type: "Passive",
       icon: "/skills/mineunsol/p2.webp",
-      description: `Upon successful attack, gain a shield equal to Magic ATK of {shield}% lasting for 2R.
-
-      [SIGNATURE WEAPON EFFECT]:
-      At the start of any turn, if you have the [King's Favor] effect, all allies except yourself gain 1000 to All DEF for the duration of the turn.`,
+      description: `From the start to the end of any unit's turn, increases Final DMG by {finalDmg}% of AP Recovery. This effect reaches its maximum at 300 AP Recovery.`,
       values: {
-        shield: [50, 55, 60, 65, 70, 75, 80, 85, 90, 95],
+        finalDmg: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
       },
     },
     {
@@ -167,12 +172,11 @@ export const min_eun_sol: CharacterDetails = {
       name: "The King's Wrath",
       type: "Active",
       ap: 90,
-      cooldown: 3,
+      cooldown: 0,
       icon: "/skills/mineunsol/s2.webp",
-      description: `This skill can only target an enemy with the [Touched the King's Offering] effect originating from yourself that exists on the battlefield.
-      Deals unblockable Magic ATK equal to {damage}% as Immaterial DMG to an enemy.
-      This attack does not trigger a critical hit, and always hit as a Weak Point Attack if the target has a weakness.`,
-      damage: { stat: "magicAtk", percent: [200, 220, 240, 260, 280, 300, 320, 340, 360, 380], damageType: "Immaterial" },
+      description: `A mysterious gaze watches, its owner unknown.
+      Deals Immaterial DMG equal to {damage}% of Magic ATK to the enemy.`,
+      damage: { stat: "magicAtk", percent: [600, 660, 720, 780, 840, 900, 960, 1020, 1080, 1140], damageType: "Immaterial" },
     },
   ],
 
@@ -195,7 +199,7 @@ export const min_eun_sol: CharacterDetails = {
 
   traits: [
     "wholehearted",
-    "mental-bulwark",
+    "the-sacrifice-unleashed",
     "human",
     "interested-magic",
     "peaceful",
