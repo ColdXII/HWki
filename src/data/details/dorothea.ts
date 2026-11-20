@@ -299,7 +299,7 @@ export const dorothea: CharacterDetails = {
       description: `Uses sorcery to create a mystical domain. Creates a cursed area with a 6m radius at the designated location.
       Applies [Blood Curse] to enemies within the area. During allies turns, enemies attempting to leave the cursed area are repelled by a mysterious force and pulled back toward its center.
       
-      [Blood Curse]: When pushed or pulled, takes Crush DMG equal to (damage)% of the caster's Melee ATK.
+      [Blood Curse]: When pushed or pulled, takes Crush DMG equal to {damage}% of the caster's Melee ATK.
       
       Then gains [Blood Eagle].
 
