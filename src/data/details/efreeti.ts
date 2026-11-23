@@ -317,7 +317,7 @@ export const efreeti: CharacterDetails = {
     "flame-of-life",
     "young-flame-elemental",
     "elemental-of-magic",
-    "interested-magic",
+    "interested-hp",
     "mysterious",
     "blazing",
     "heat-resistant",

@@ -25,6 +25,7 @@ export const traits: Trait[] = [
       id: "elemental-of-magic",
       name: "Elemental of Magic",
       kind: "unique",
+      icon: "/icons/stats/elemental-magic.webp",
       description: "Magic ATK 20% \n Max HP -10%",
       effects: [
         { stat: "magicAtk", type: "percent", value: 20 },
@@ -197,6 +198,7 @@ export const traits: Trait[] = [
       id: "phoenix",
       name: "Phoenix",
       kind: "unique",
+      icon: "/icons/stats/phoenix.webp",
       description: "Heat Boost 10% \n Max HP 5%",
       effects: [
         { stat: "heatBoost", type: "percent", value: 10 },
@@ -287,6 +289,20 @@ export const traits: Trait[] = [
       ],
     },
     {
+      id: "interested-accuracy",
+      name: "Interested",
+      kind: "unique",
+      icon: "/icons/stats/interested.webp",
+      effects: [
+        {
+          stat: "accuracy",
+          type: "percent",
+          value: 10,
+          condition: "maxAffection",
+        },
+      ],
+    },
+    {
       id: "interested-evade",
       name: "Interested",
       kind: "unique",
@@ -334,6 +350,7 @@ export const traits: Trait[] = [
         id: "orkean-combat-support",
         name: "Orkean Combat Support",
         kind: "unique",
+        icon: "/icons/stats/shooting.webp",
         description:
         `Activates the level 1 Passive Skill [Orkean Combat Support].
 
@@ -348,6 +365,7 @@ export const traits: Trait[] = [
         id: "combat-readiness",
         name: "Combat Readiness",
         kind: "unique",
+        icon: "/icons/stats/target.webp",
         description: 
         `Ranged ATK 20%
         Max HP -10%`,
@@ -362,6 +380,7 @@ export const traits: Trait[] = [
         id: "shut-in-affinity",
         name: "Shut-In Affinity",
         kind: "unique",
+        icon: "/icons/stats/hidden.webp",
         description: `Activates the Level 1 Passive Skill [Healthy Adjustment]. \n
         [Healthy Adjustment]: Recover HP equal to 180% of Magic ATK when using Basic Attack,
         If the attack hits a Weak Point, recovers an additional 240% of Magic ATK as HP. \n
@@ -376,6 +395,7 @@ export const traits: Trait[] = [
         id: "hikikomoris-resilience",
         name: "Hikikomori's Resilience",
         kind: "unique",
+        icon: "/icons/stats/attacking.webp",
         description: `Gain 1 stack of [Kinetic Momentum] for 2 rounds when using a Combat Skill. \n
         [Conservation of Momentum]: At the start of your turn, if you have the [Kinetic Momentum] effect, the SPD increases by 80% and Basic Attack AP cost is reduced by 65% for that turn.
         At the start of your turn, if another Vanguard (excluding the Human God) is within 3m, gain the [Comfort Zone Breach] effect. \n
@@ -412,6 +432,7 @@ export const traits: Trait[] = [
         id: "distroted-wish",
         name: "A Distorted Wish",
         kind: "unique",
+        icon: "/icons/stats/mental.webp",
         description: `Formation Cost +1
         Intelligence -7
         Vitality 2
@@ -429,6 +450,7 @@ export const traits: Trait[] = [
         id: "do-not-touch",
         name: "Do Not Touch",
         kind: "unique",
+        icon: "/icons/stats/counterattack.webp",
         description: `Activates the Level 1 Passive Skill [Do Not Touch].
 
         [Do Not Touch]: When attacked, at the end of the turn, inflicts Poison DMG equal to 100% of the attacker's accumulated [Acid Venom].`,
@@ -439,6 +461,7 @@ export const traits: Trait[] = [
         id: "flame-of-life",
         name: "Flame of Life",
         kind: "unique",
+        icon: "/icons/stats/body.webp",
         description: `Activates the Level 1 passive skill [Flame of Life].
           
         [Flame of Life]: During combat, increases Magic ATK by 21% of Efreeti's base Max HP.
@@ -450,6 +473,7 @@ export const traits: Trait[] = [
         id: "young-flame-elemental",
         name: "Young Flame Elemental",
         kind: "unique",
+        icon: "/icons/stats/fire.webp",
         description: `Activates Level 1 passive skill [Warmth Within the Hearth].
           
         [Warmth Within the Hearth]: Converts the Additional Crush DMG of the [Arcane Explosion] skill into Additional Heat DMG.
@@ -467,6 +491,7 @@ export const traits: Trait[] = [
         id: "emilias-diagnosis-method",
         name: "Emilia's Diagnosis Method",
         kind: "unique",
+        icon: "/icons/stats/two-side.webp",
         description: `Formation Cost +1
           
         Activates the Level 1 passive skill [This Might Sting A Little].
@@ -490,6 +515,7 @@ export const traits: Trait[] = [
         id: "case-collection",
         name: "Case Collection",
         kind: "unique",
+        icon: "/icons/stats/two-side.webp",
         description: `When Emilia uses a skill, its effects increase based on her Crit Rate. At 100% Crit Rate, it gains up to 100% additional effect.`,
         effects: [
         ],
@@ -499,6 +525,7 @@ export const traits: Trait[] = [
         id: "inner-desire",
         name: "Inner Desire",
         kind: "unique",
+        icon: "/icons/stats/mental.webp",
         description: `Vitality 2`,
         effects: [
           { stat: "vit", type: "flat", value: 2 },
@@ -508,6 +535,7 @@ export const traits: Trait[] = [
         id: "energy-alignment",
         name: "Energy Alignment",
         kind: "unique",
+        icon: "/icons/stats/two-side.webp",
         description: `Activates the Level 1 passive skill [Energy Alignment].
           
         [Energy Alignment]: During battle, increases all allies' Max HP by 10% of your Max HP and increases Healing Done by 15%.`,
@@ -519,6 +547,7 @@ export const traits: Trait[] = [
         id: "ancient-archmage",
         name: "Ancient Archmage",
         kind: "unique",
+        icon: "/icons/stats/noble.webp",
         description: `Activates the Level 1 Passive Skill [Ancient Archmage]. \n
         [Ancient Archmage]: Whenever Everette uses a skill other than Standby or a Combat Skill, her Magic ATK increases by 100%.
         This effect is removed at the end of the turn in which she uses a Standby or Attack Skill. Can stack up to 5 times. \n
@@ -529,6 +558,7 @@ export const traits: Trait[] = [
         id: "the-world-contract",
         name: "The World Contract",
         kind: "unique",
+        icon: "/icons/stats/spark.webp",
         description: `Activates Level 3 Passive Skill [Temporal Manipulation].
 
         [Temporal Manipulation]: During battle, grants all allies the [Time Acceleration] effect and all enemies the [Time Deceleration] effect.
@@ -543,6 +573,7 @@ export const traits: Trait[] = [
         id: "the-talk-of-the-town",
         name: "The Talk of the Town",
         kind: "unique",
+        icon: "/icons/stats/think.webp",
         description: `Activates the Level 1 passive skill [The Talk of the Town].
           
         [The Talk of the Town]: All female Vanguards take an interest in Fammene and try to stand out more.
@@ -557,6 +588,7 @@ export const traits: Trait[] = [
         id: "lady-of-the-breeze",
         name: "Lady of the Breeze",
         kind: "unique",
+        icon: "/icons/stats/wind.webp",
         description: `Formation Cost +1
           
         Activates the Level 1 passive skill [Rushing Breeze].
@@ -576,6 +608,7 @@ export const traits: Trait[] = [
         id: "transcendent",
         name: "Transcendent",
         kind: "unique",
+        icon: "/icons/stats/belief.webp",
         description: `Cannot perform Weak Point Attacks, but gains Magic ATK, Max HP, Elemental Boost, and AP in return.
         Magic ATK 50%
         Max HP 25%
@@ -592,6 +625,7 @@ export const traits: Trait[] = [
         id: "eternity",
         name: "Eternity",
         kind: "unique",
+        icon: "/icons/stats/spark.webp",
         description: `Activates the Level 1 passive skill [Eternity].
           
         Upon taking fatal damage, nullifies that damage once with transcendent power, recovers 50% of Max HP, and gains [Eternity] for 1R.
@@ -607,6 +641,7 @@ export const traits: Trait[] = [
         id: "limitless-willpower",
         name: "Limitless Willpower",
         kind: "unique",
+        icon: "/icons/stats/smart.webp",
         description: `Formation Cost +2
         Intelligence +2
         Agility +1
@@ -622,6 +657,7 @@ export const traits: Trait[] = [
         id: "entangled-threads",
         name: "Entangled Threads",
         kind: "unique",
+        icon: "/icons/stats/fire.webp",
         description: `Activates the Level 1 Passive Skill [Dual Entanglement].
 
         [Dual Entanglement]: The Combat Skill DMG of allies excluding yourself, increases by 24% and the Basic Attack DMG increases by 4%.
@@ -1344,6 +1380,7 @@ export const traits: Trait[] = [
         id: "bullseye",
         name: "Bullseye",
         kind: "unique",
+        icon: "/icons/stats/target.webp",
         description: `Activates the Level 1 Passive Skill [Bullseye].
           
         [Bullseye]: When an ally is attacked, performs a Support Counterattack.`,
@@ -1354,6 +1391,7 @@ export const traits: Trait[] = [
         id: "guaranteed-hit",
         name: "Guaranteed Hit",
         kind: "unique",
+        icon: "/icons/stats/noble.webp",
         description: `On a successful attack, inflicts [Drone Target] on the enemy for 2R.
           
         [Drone Target]: At the start of a turn in which Araha uses [Wire Maneuver Shot], sends a self-destruct drone to each target, dealing Additional Pierce DMG equal to 300% of Ranged ATK.`,
@@ -1492,34 +1530,35 @@ export const traits: Trait[] = [
         ],
       },
     // == Osla ==
-    {
-      id: "oath-of-magnatira",
-      name: "Oath of Magnatira",
-      kind: "unique",
-      icon: "/icons/stats/belief.webp",
-      description: `Activates the Level 1 Passive Skill [Oath of Magnatira].
-        
-        [Oath of Magnatira]: On enemy defeat, gain Counterattack count.`,
-      effects: [
-      ],
-    },
-    {
-      id: "savage-regeneration",
-      name: "Savage Regeneration",
-      kind: "unique",
-      icon: "/icons/stats/bodyheal.webp",
-      description: `Activates the Level 3 Passive Skill [Physical Regeneration].
-        
-        [Physical Regeneration]: At the start of own turn, recovers HP equal to 6% of Max HP + 120% of Magic ATK.`,
-      effects: [
-      ],
-    },
+      {
+        id: "oath-of-magnatira",
+        name: "Oath of Magnatira",
+        kind: "unique",
+        icon: "/icons/stats/belief.webp",
+        description: `Activates the Level 1 Passive Skill [Oath of Magnatira].
+          
+          [Oath of Magnatira]: On enemy defeat, gain Counterattack count.`,
+        effects: [
+        ],
+      },
+      {
+        id: "savage-regeneration",
+        name: "Savage Regeneration",
+        kind: "unique",
+        icon: "/icons/stats/bodyheal.webp",
+        description: `Activates the Level 3 Passive Skill [Physical Regeneration].
+          
+          [Physical Regeneration]: At the start of own turn, recovers HP equal to 6% of Max HP + 120% of Magic ATK.`,
+        effects: [
+        ],
+      },
   // == S ==
     // == Bella ==
       {
         id: "gods-beloved",
         name: "God's Beloved",
         kind: "unique",
+        icon: "/icons/stats/devotion.webp",
         description: `Activates the Level 1 passive skill [God's Beloved].
           
         [God's Beloved]: Each time an ally recovers HP, self has a 30% chance to gain 20 AP.`,
@@ -1530,6 +1569,7 @@ export const traits: Trait[] = [
         id: "reviving-bough",
         name: "Reviving Bough",
         kind: "unique",
+        icon: "/icons/stats/cross.webp",
         description: `Activates the Level 3 passive skill [Sacred Healing].
           
         [Sacred Healing]: At the start of the round, allies with a lower HP percentage than self recover HP equal to 12% of their Max HP.`,
@@ -1541,6 +1581,7 @@ export const traits: Trait[] = [
         id: "the-rabid-dog",
         name: "The Rabid Dog",
         kind: "unique",
+        icon: "/icons/stats/two-side.webp",
         description: `Activates Level 1 Passive Skill [The Rabid Dog].
 
         [The Rabid Dog]: When an ally becomes incapacitated, overwhelming vengeance surges.
@@ -1555,6 +1596,7 @@ export const traits: Trait[] = [
         id: "grrik-s-sincerity",
         name: "Grrik's Sincerity",
         kind: "unique",
+        icon: "/icons/stats/grrik.webp",
         description: `Melee ATK 30%`,
         effects: [
           { stat: "meleeAtk", type: "percent", value: 30 },
@@ -1565,6 +1607,7 @@ export const traits: Trait[] = [
         id: "prisoner",
         name: "Prisoner",
         kind: "unique",
+        icon: "/icons/stats/belief.webp",
         description: `Starting AP +20`,
         effects: [
           { stat: "startAp", type: "flat", value: 20 },
@@ -1574,6 +1617,7 @@ export const traits: Trait[] = [
         id: "primal-core",
         name: "Primal Core",
         kind: "unique",
+        icon: "/icons/stats/burst.webp",
         description: `Activates the Level 3 passive skill [Heat of the Earth].
           
         [Heat of the Earth]: If HP is 100% during battle, reduces the AP cost of the Summon Lava skill by 60%.`,
@@ -1585,6 +1629,7 @@ export const traits: Trait[] = [
         id: "snake-tongue",
         name: "Snake-tongue",
         kind: "unique",
+        icon: "/icons/stats/two-side.webp",
         description: `Activates the Level 1 Passive Skill [Snake-tongue].
           
         [Snake-tongue]: Deliver some encouraging words(?) to boost the morale of the allies deployed alongside her.
@@ -1600,6 +1645,7 @@ export const traits: Trait[] = [
         id: "tactical-commander",
         name: "Tactical Commander",
         kind: "unique",
+        icon: "/icons/stats/noble.webp",
         description: `Activates the Level 3 Passive Skill [Command].
           
         [Command]: From the start of any turn until the end of that turn, increases Melee ATK for self and nearby allies by 10% for each ally within 5m.`,
@@ -1785,6 +1831,7 @@ export const traits: Trait[] = [
         id: "growing-sprout",
         name: "Growing Sprout",
         kind: "unique",
+        icon: "/icons/stats/noble.webp",
         description: `Formation Cost -2
         Intelligence -6`,
         effects: [
@@ -1955,7 +2002,9 @@ export const traits: Trait[] = [
       name: "Fundamental Warrior",
       kind: "general",
       grade: 7,
-      description: "During battle, Basic Attack DMG increases by 10%. Melee ATK 10%",
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Basic Attack DMG increases by 10%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "basicAttackDmg", type: "percent", value: 10, battleOnly: true },
@@ -1966,7 +2015,9 @@ export const traits: Trait[] = [
       name: "Consistent Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Basic Attack DMG increases by 10%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Basic Attack DMG increases by 10%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "basicAttackDmg", type: "percent", value: 10 },
@@ -1977,7 +2028,9 @@ export const traits: Trait[] = [
       name: "Unadorned Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Basic Attack DMG increases by 10%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Basic Attack DMG increases by 10%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "basicAttackDmg", type: "percent", value: 10, battleOnly: true },
@@ -1988,7 +2041,9 @@ export const traits: Trait[] = [
       name: "Trump-Card Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Combat Skill DMG increases by 10%. Melee ATK 10%`,
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Combat Skill DMG increases by 10%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "combatSkillDmg", type: "percent", value: 10, battleOnly: true },
@@ -1999,7 +2054,9 @@ export const traits: Trait[] = [
       name: "Battle-Ready Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Combat Skill DMG increases by 10%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Combat Skill DMG increases by 10%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "combatSkillDmg", type: "percent", value: 10, battleOnly: true },
@@ -2010,7 +2067,9 @@ export const traits: Trait[] = [
       name: "All-In Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Combat Skill DMG increases by 10%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Combat Skill DMG increases by 10%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "combatSkillDmg", type: "percent", value: 10, battleOnly: true },
@@ -2021,7 +2080,9 @@ export const traits: Trait[] = [
       name: "Retaliating Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Counterattack DMG increases by 10%. Melee ATK 10%`,
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Counterattack DMG increases by 10%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "counterattackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2032,7 +2093,9 @@ export const traits: Trait[] = [
       name: "Surefire Countering Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Counterattack DMG increases by 10%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Counterattack DMG increases by 10%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "counterattackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2043,7 +2106,9 @@ export const traits: Trait[] = [
       name: "Retaliating Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Counterattack DMG increases by 10%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Counterattack DMG increases by 10%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "counterattackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2054,7 +2119,9 @@ export const traits: Trait[] = [
       name: "Coordinated Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Support Attack DMG increases by 10%. Melee ATK 10%`,
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Support Attack DMG increases by 10%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "supportAttackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2065,7 +2132,9 @@ export const traits: Trait[] = [
       name: "Coordinated-Attack Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Support Attack DMG increases by 10%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Support Attack DMG increases by 10%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "supportAttackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2076,7 +2145,9 @@ export const traits: Trait[] = [
       name: "Coordinated Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Support Attack DMG increases by 10%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Support Attack DMG increases by 10%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "supportAttackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2087,7 +2158,9 @@ export const traits: Trait[] = [
       name: "Ally-Protecting Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Support Counterattack DMG increases by 10%. Melee ATK 10%`,
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Support Counterattack DMG increases by 10%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "supportCounterattackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2098,7 +2171,9 @@ export const traits: Trait[] = [
       name: "Vangeful Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Support Counterattack DMG increases by 10%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Support Counterattack DMG increases by 10%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "supportCounterattackDmg", type: "percent", value: 10, battleOnly: true },
@@ -2109,18 +2184,22 @@ export const traits: Trait[] = [
       name: "Standby Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Support Counterattack DMG increases by 10%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Support Counterattack DMG increases by 10%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "supportCounterattackDmg", type: "percent", value: 10, battleOnly: true },
       ],
     },
     {
-      id: "opeing-exploiting-warrior",
-      name: "Opeing-Exploiting Warrior",
+      id: "opening-exploiting-warrior",
+      name: "Opening-Exploiting Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Response DMG increases by 10%. Melee ATK 10%`,
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Response DMG increases by 10%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "responseDmg", type: "percent", value: 10, battleOnly: true },
@@ -2131,7 +2210,9 @@ export const traits: Trait[] = [
       name: "Opening-Exploiting Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Response DMG increases by 10%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Response DMG increases by 10%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "responseDmg", type: "percent", value: 10, battleOnly: true },
@@ -2142,7 +2223,9 @@ export const traits: Trait[] = [
       name: "Quick-Reponding Archmage",
       kind: "general",
       grade: 7,
-      description: `During battle, Response DMG increases by 10%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Response DMG increases by 10%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "responseDmg", type: "percent", value: 10, battleOnly: true },
@@ -2153,7 +2236,9 @@ export const traits: Trait[] = [
       name: "Momentum Building Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Additional DMG Boost increases by 10%. Melee ATK 10%`,
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Additional DMG Boost increases by 10%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "additionalDmgBoost", type: "percent", value: 10, battleOnly: true },
@@ -2164,7 +2249,9 @@ export const traits: Trait[] = [
       name: "Momentum-Building Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Additional DMG Boost increases by 10%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Additional DMG Boost increases by 10%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "additionalDmgBoost", type: "percent", value: 10, battleOnly: true },
@@ -2175,7 +2262,9 @@ export const traits: Trait[] = [
       name: "Accelerating Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Additional DMG Boost increases by 10%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Additional DMG Boost increases by 10%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "additionalDmgBoost", type: "percent", value: 10, battleOnly: true },
@@ -2186,7 +2275,9 @@ export const traits: Trait[] = [
       name: "Finishing Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Final DMG increases by 7%. Melee ATK 10%`,
+      icon: "/icons/stats/warrior-glory.webp",
+      description: `During battle, Final DMG increases by 7%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "finalDmg", type: "percent", value: 7, battleOnly: true },
@@ -2197,7 +2288,9 @@ export const traits: Trait[] = [
       name: "No-Mercy Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Final DMG increases by 7%. Ranged ATK 10%`,
+      icon: "/icons/stats/gunner-glory.webp",
+      description: `During battle, Final DMG increases by 7%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "finalDmg", type: "percent", value: 7, battleOnly: true },
@@ -2208,7 +2301,9 @@ export const traits: Trait[] = [
       name: "Finishing Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Final DMG increases by 7%. Magic ATK 10%`,
+      icon: "/icons/stats/mage-glory.webp",
+      description: `During battle, Final DMG increases by 7%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "finalDmg", type: "percent", value: 7, battleOnly: true },
@@ -2219,7 +2314,9 @@ export const traits: Trait[] = [
       name: "Elemental Warrior",
       kind: "general",
       grade: 7,
-      description: `During battle, Elemental Boost increases by 7%. Melee ATK 10%`,
+      icon: "/icons/stats/attack-buff.webp",
+      description: `During battle, Elemental Boost increases by 7%.
+      Melee ATK 10%`,
       effects: [
         { stat: "meleeAtk", type: "percent", value: 10 },
         { stat: "elementalBoost", type: "percent", value: 7, battleOnly: true },
@@ -2230,7 +2327,9 @@ export const traits: Trait[] = [
       name: "Power-Honed Marksman",
       kind: "general",
       grade: 7,
-      description: `During battle, Elemental Boost increases by 7%. Ranged ATK 10%`,
+      icon: "/icons/stats/attack-buff.webp",
+      description: `During battle, Elemental Boost increases by 7%.
+      Ranged ATK 10%`,
       effects: [
         { stat: "rangedAtk", type: "percent", value: 10 },
         { stat: "elementalBoost", type: "percent", value: 7, battleOnly: true },
@@ -2241,7 +2340,9 @@ export const traits: Trait[] = [
       name: "Energy-Infused Mage",
       kind: "general",
       grade: 7,
-      description: `During battle, Elemental Boost increases by 7%. Magic ATK 10%`,
+      icon: "/icons/stats/attack-buff.webp",
+      description: `During battle, Elemental Boost increases by 7%.
+      Magic ATK 10%`,
       effects: [
         { stat: "magicAtk", type: "percent", value: 10 },
         { stat: "elementalBoost", type: "percent", value: 7, battleOnly: true },
@@ -2252,6 +2353,7 @@ export const traits: Trait[] = [
       name: "Focused Target Strike",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critRate-buff.webp",
       description: `When attacking a single target, DMG increases by 25% until the end of turn.`,
       effects: [
       ],
@@ -2261,6 +2363,7 @@ export const traits: Trait[] = [
       name: "Sweeping Momentum",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/attack-buff.webp",
       description: `When a single attack successfully hits 3 or more enemies, All ATK increases by 30% until the end of turn.`,
       effects: [
       ],
@@ -2270,6 +2373,7 @@ export const traits: Trait[] = [
       name: "Ambush Weak Point",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critDmg-buff.webp",
       description: `When attacking outside own turn Increases Crit DMG by 20%.`,
       effects: [
       ],
@@ -2279,6 +2383,7 @@ export const traits: Trait[] = [
       name: "Deepening Wounds",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critRate-buff.webp",
       description: `DMG increases based on target's missing HP, up to 33%.`,
       effects: [
       ],
@@ -2288,6 +2393,7 @@ export const traits: Trait[] = [
       name: "Strike the Defenseless",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critRate-buff.webp",
       description: `DMG increases by 20% when attacking an enemy at 100% HP.`,
       effects: [
       ],
@@ -2297,6 +2403,7 @@ export const traits: Trait[] = [
       name: "Overflowing Confidence",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critDmg-buff.webp",
       description: `When attacking, each 1% of Crit Rate exceeding 100% increases Crit DMG by 1%, up to 50%.`,
       effects: [
       ],
@@ -2306,6 +2413,7 @@ export const traits: Trait[] = [
       name: "Reward For Precision",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/attack-buff.webp",
       description: `Additional DMG Boost increases based on base Accuracy. For Every 100 Accuracy, Additional DMG Boost increases, by 10%, up to 50%`,
       effects: [
       ],
@@ -2315,6 +2423,7 @@ export const traits: Trait[] = [
       name: "First-Strike Finisher",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/crit-buff.webp",
       description: `When Attacking a target for the first time, deals additional Pierce DMG equal to 200% of combined All ATK. Targets that have already taken DMG from this Effect cannot be affected by it again.`,
       effects: [
       ],
@@ -2324,6 +2433,7 @@ export const traits: Trait[] = [
       name: "Flash Awakening",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critDmg-buff.webp",
       description: `At the Start of any turn, Crit Rate Increases by 5% and Crit DMG by 10%. These bonuses expire at the end of your turn.`,
       effects: [
       ],
@@ -2333,6 +2443,7 @@ export const traits: Trait[] = [
       name: "Reckless Assault",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/attack-buff.webp",
       description: `DMG dealt and DMG taken increase by 20%.`,
       effects: [
       ],
@@ -2342,6 +2453,7 @@ export const traits: Trait[] = [
       name: "Costly Firepower",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/attack-buff.webp",
       description: `AP cost of all skills increases by 15%, and All ATK increases by 30%.`,
       effects: [
       ],
@@ -2351,6 +2463,7 @@ export const traits: Trait[] = [
       name: "Sprint Momentum",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/attack-buff.webp",
       description: `When attacking, All ATK temporarily increases based on the distance traveled, up to 200% at 10m.`,
       effects: [
       ],
@@ -2360,6 +2473,7 @@ export const traits: Trait[] = [
       name: "Punish the Disabled",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critRate-buff.webp",
       description: `When attacking a target affected by [Stun] or [Taunt], deals additional Pierce DMG equal to 250 of Physical DEF. This DMG can only occur one per turn.`,
       effects: [
       ],
@@ -2369,6 +2483,7 @@ export const traits: Trait[] = [
       name: "Consecutive Action Momentum",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/attack-buff.webp",
       description: `Each attack increases All ATK and all Elemental Boost by 8% until the end of turn.`,
       effects: [
       ],
@@ -2378,6 +2493,7 @@ export const traits: Trait[] = [
       name: "Desperate Struggle",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/attack-buff.webp",
       description: `When Attacking, increases All ATK based on own lost HP, upto 100%.`,
       effects: [
       ],
@@ -2387,6 +2503,7 @@ export const traits: Trait[] = [
       name: "Shielded Menace",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critRate-buff.webp",
       description: `When attacking while you have a Shield, Crit Rate increases by 25%.`,
       effects: [
       ],
@@ -2396,6 +2513,7 @@ export const traits: Trait[] = [
       name: "Vital Point Pierce",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/crit-buff.webp",
       description: `On Weak Point Attacks, deals an additional Slash DMG equal to 75% of combined All ATK. This DMG increases based on you Crit DMG. This DMG can only occur once per turn.`,
       effects: [
       ],
@@ -2405,6 +2523,7 @@ export const traits: Trait[] = [
       name: "Life Force",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/shield-buff.webp",
       description: `For every 100 base Max HP, increases Elemental Boost by 1% up to 30%.`,
       effects: [
       ],
@@ -2414,6 +2533,7 @@ export const traits: Trait[] = [
       name: "Spear of Defense",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/shield-buff.webp",
       description: `When Attacking, Melee ATK increases by 100% of Physical DEF until the end of turn, up to a maximum increase of 1000.`,
       effects: [
       ],
@@ -2423,6 +2543,7 @@ export const traits: Trait[] = [
       name: "Last Breath",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/critRate-buff.webp",
       description: `On a successful hit, executes enemies with less than 12% HP. This effect does not apply to powerful enemies.`,
       effects: [
       ],
@@ -2432,6 +2553,7 @@ export const traits: Trait[] = [
       name: "Burst Step",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/allAtk.webp",
       description: `if no AP was Spent on movement during the current turn, All ATK, Crit Rate, and Accuracy increase by 30% until the end of your next turn.`,
       effects: [
       ],
@@ -2441,6 +2563,7 @@ export const traits: Trait[] = [
       name: "Ironclad",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/defend-buff.webp",
       description: `During Battle, DMG taken decreases by 30%.`,
       effects: [
       ],
@@ -2450,6 +2573,7 @@ export const traits: Trait[] = [
       name: "Layered Armor",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/defend-buff.webp",
       description: `Each time you are hit, all DEF permanently increases by 100 and aggroAdj modifier increases by 5. Stacks up to 20 times.`,
       effects: [
       ],
@@ -2459,15 +2583,17 @@ export const traits: Trait[] = [
       name: "Renewed Protection",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support-buff.webp",
       description: `At the Start of each Round, gains a Barrier equal to 50% of Max HP for 1 Round.`,
       effects: [
       ],
     },
     {
-      id: "death-s-reprive",
+      id: "deaths-reprive",
       name: "Death's Reprive",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/defend-buff.webp",
       description: `Once per battle, when taking fatal damage, nullifies that damage and fully recovers HP. Afterwards, increases All DEF by 1,000 for 1 Round.`,
       effects: [
       ],
@@ -2477,6 +2603,7 @@ export const traits: Trait[] = [
       name: "Life for Power",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/defend-buff.webp",
       description: `During battle, reduces All ATK by 20% but increases Max HP by 40%.`,
       effects: [
       ],
@@ -2486,6 +2613,7 @@ export const traits: Trait[] = [
       name: "Flawless Stance",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/defend-buff.webp",
       description: `During battle, reduces Weak Point angle by 360°.`,
       effects: [
       ],
@@ -2495,6 +2623,7 @@ export const traits: Trait[] = [
       name: "Perfect Retaliation",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/reflect.webp",
       description: `On a successful Block, always Counterattacks and increases Counterattack DMG by 100% and Range by 2m.`,
       effects: [
       ],
@@ -2504,6 +2633,7 @@ export const traits: Trait[] = [
       name: "Composure Under Taunt",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/defend-buff.webp",
       description: `When attacked by a Taunted enemy, All DEF temporarily increases by 1,000 and you gain 15 AP.`,
       effects: [
       ],
@@ -2513,6 +2643,7 @@ export const traits: Trait[] = [
       name: "Ironclad Counterattack",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/reflect.webp",
       description: `When hit, deals additional Slash DMG equal to 100% of Physical DEF to the attacker. This DMG can only occur once per turn.`,
       effects: [
       ],
@@ -2522,6 +2653,7 @@ export const traits: Trait[] = [
       name: "Unbreakable Will",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/defend-buff.webp",
       description: `Becomes immune to [Stun], [Taunt], Push and Pull effects.`,
       effects: [
       ],
@@ -2531,6 +2663,7 @@ export const traits: Trait[] = [
       name: "Taste of Blood",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/blood.webp",
       description: `Gains 5% Lifesteal.`,
       effects: [
       ],
@@ -2540,6 +2673,7 @@ export const traits: Trait[] = [
       name: "Tenfold Retaliation",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/reflect.webp",
       description: `Reflects 1,000% of damage taken.`,
       effects: [
       ],
@@ -2549,6 +2683,7 @@ export const traits: Trait[] = [
       name: "Lightfooted",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support-buff.webp",
       description: `Reduces the AP cost of all skills by 10%.`,
       effects: [
       ],
@@ -2558,6 +2693,7 @@ export const traits: Trait[] = [
       name: "Restored Vigot",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support-buff.webp",
       description: `When attacking, refunds 15% of the AP spent on the skill. Activates up to 3 times per round.`,
       effects: [
       ],
@@ -2567,6 +2703,7 @@ export const traits: Trait[] = [
       name: "Accelerated Aim",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support-buff.webp",
       description: `On a successful hit, gains AP. Can activate up 15 times per round.`,
       effects: [
       ],
@@ -2576,6 +2713,7 @@ export const traits: Trait[] = [
       name: "Rising Power",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/allAtk.webp",
       description: `For each Round elapsed, increases All ATK, Accuracy, Evade, SPD, AP Recovery, Crit Rate, and Crit DMG by 10%, and All DEF by 100.`,
       effects: [
       ],
@@ -2585,6 +2723,7 @@ export const traits: Trait[] = [
       name: "Quick Step",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support-buff.webp",
       description: `AP Rcovery increases as base SPD decreases. Grants no bonus at 110 SPD or higher and increases AP Recovery by up 60 at 70 SPD.`,
       effects: [
       ],
@@ -2594,6 +2733,7 @@ export const traits: Trait[] = [
       name: "Evasion Build-Up",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/allAtk.webp",
       description: `Each successful Evade permanently increases Melee ATK, Slash Boost, Crit Rate, and Crit DMG by 7%. Stacks up to 10 times.`,
       effects: [
       ],
@@ -2603,6 +2743,7 @@ export const traits: Trait[] = [
       name: "Last Shield Standing",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support-buff.webp",
       description: `When hit, all other allies gain 10 AP. Each ally can benefit from this effect up to 6 times per round, shared across all units equipped with this effect.`,
       effects: [
       ],
@@ -2612,6 +2753,7 @@ export const traits: Trait[] = [
       name: "Supportive Elemental Boost",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/elemental.webp",
       description: `Using a Support Skill permanently increases all allies' Elemental Boost by 12%. Does not stack with the same Effect.`,
       effects: [
       ],
@@ -2621,6 +2763,7 @@ export const traits: Trait[] = [
       name: "Eroding Strike",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/elemental.webp",
       description: `On a successful hit, reduces the target's all DEF by 100. Stacks up to 5 times.`,
       effects: [
       ],
@@ -2630,6 +2773,7 @@ export const traits: Trait[] = [
       name: "Overwhelming Presence",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/elemental.webp",
       description: `Increases DMG taken by all enemies within a 5m radius by 15%. Does not stack with the same effect.`,
       effects: [
       ],
@@ -2639,6 +2783,7 @@ export const traits: Trait[] = [
       name: "Renewed Reserves",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support-buff.webp",
       description: `Each round, gains additional AP equal to 30% of own AP Recovery`,
       effects: [
       ],
@@ -2648,6 +2793,7 @@ export const traits: Trait[] = [
       name: "Abundant Healing",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/heal-buff.webp",
       description: `Increases Healing Done and Healing Received by 50%`,
       effects: [
       ],
@@ -2657,6 +2803,7 @@ export const traits: Trait[] = [
       name: "Mana-Infused Healing",
       kind: "general",
       grade: 7,
+      icon: "/icons/stats/support.webp",
       description: `Using a Support Skill restores HP to all allies equal to 30% of your Magic ATK. Activates up to 3 time per round.`,
       effects: [
       ],
@@ -2667,10 +2814,12 @@ export const traits: Trait[] = [
       name: "Unceasing Immortal",
       kind: "general",
       grade: 6,
-      description: `Max HP 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Max HP 5%`,
       effects: [
-        { stat: "maxHp", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "maxHp", type: "percent", value: 5 },
       ],
     },
     {
@@ -2678,10 +2827,12 @@ export const traits: Trait[] = [
       name: "Relentless Shadow",
       kind: "general",
       grade: 6,
-      description: `Evade 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Evade 5%`,
       effects: [
-        { stat: "evade", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "evade", type: "percent", value: 5 },
       ],
     },
     {
@@ -2689,10 +2840,12 @@ export const traits: Trait[] = [
       name: "Steadfast Divine Archer",
       kind: "general",
       grade: 6,
-      description: `Accuracy 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Accuracy 5%`,
       effects: [
-        { stat: "accuracy", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "accuracy", type: "percent", value: 5 },
       ],
     },
     {
@@ -2700,10 +2853,12 @@ export const traits: Trait[] = [
       name: "Diligent Gladiator",
       kind: "general",
       grade: 6,
-      description: `Melee ATK 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Melee ATK 5%`,
       effects: [
-        { stat: "meleeAtk", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "meleeAtk", type: "percent", value: 5 },
       ],
     },
     {
@@ -2711,21 +2866,25 @@ export const traits: Trait[] = [
       name: "Diligent Sniper",
       kind: "general",
       grade: 6,
-      description: `Ranged ATK 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Ranged ATK 5%`,
       effects: [
-        { stat: "rangedAtk", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "rangedAtk", type: "percent", value: 5 },
       ],
     },
     {
-      id: "restless-mage",
-      name: "Restless Mage",
+      id: "restless-sage",
+      name: "Restless Sage",
       kind: "general",
       grade: 6,
-      description: `Magic ATK 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Magic ATK 5%`,
       effects: [
-        { stat: "magicAtk", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "magicAtk", type: "percent", value: 5 },
       ],
     },
     {
@@ -2733,7 +2892,9 @@ export const traits: Trait[] = [
       name: "Tireless Wanderer",
       kind: "general",
       grade: 6,
-      description: `AP Recovery 4.5%, SPD 5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      SPD 5%`,
       effects: [
         { stat: "apRecovery", type: "percent", value: 4.5 },
         { stat: "spd", type: "percent", value: 5 },
@@ -2744,10 +2905,12 @@ export const traits: Trait[] = [
       name: "Steadfast Assault Captain",
       kind: "general",
       grade: 6,
-      description: `Starting AP 5, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Starting AP 5`,
       effects: [
-        { stat: "startAp", type: "flat", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "startAp", type: "flat", value: 5 },
       ],
     },
     {
@@ -2755,10 +2918,12 @@ export const traits: Trait[] = [
       name: "Restless Fixer",
       kind: "general",
       grade: 6,
-      description: `Crit Rate 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Crit Rate 5%`,
       effects: [
-        { stat: "critRate", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "critRate", type: "percent", value: 5 },
       ],
     },
     {
@@ -2766,10 +2931,12 @@ export const traits: Trait[] = [
       name: "Vigorous Arbiter",
       kind: "general",
       grade: 6,
-      description: `Crit DMG 10%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Crit DMG 10%`,
       effects: [
-        { stat: "critDmg", type: "percent", value: 10 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "critDmg", type: "percent", value: 10 },
       ],
     },
     {
@@ -2777,10 +2944,12 @@ export const traits: Trait[] = [
       name: "Unceasing Swordmaster",
       kind: "general",
       grade: 6,
-      description: `Slash Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Slash Boost 5%`,
       effects: [
-        { stat: "slashBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "slashBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2788,10 +2957,12 @@ export const traits: Trait[] = [
       name: "Vigorous Master Archer",
       kind: "general",
       grade: 6,
-      description: `Pierce Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Pierce Boost 5%`,
       effects: [
-        { stat: "pierceBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "pierceBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2799,10 +2970,12 @@ export const traits: Trait[] = [
       name: "Restless Destroyer",
       kind: "general",
       grade: 6,
-      description: `Crush Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%]
+      Crush Boost 5%`,
       effects: [
-        { stat: "crushBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "crushBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2810,10 +2983,12 @@ export const traits: Trait[] = [
       name: "Steadfast Infernomancer",
       kind: "general",
       grade: 6,
-      description: `Heat Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Heat Boost 5%`,
       effects: [
-        { stat: "heatBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "heatBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2821,10 +2996,12 @@ export const traits: Trait[] = [
       name: "Diligent Blizzard Mage",
       kind: "general",
       grade: 6,
-      description: `Cold Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Cold Boost 5%`,
       effects: [
-        { stat: "coldBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "coldBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2832,10 +3009,12 @@ export const traits: Trait[] = [
       name: "Relentless Thunder Mage",
       kind: "general",
       grade: 6,
-      description: `Electric Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Electric Boost 5%`,
       effects: [
-        { stat: "electricBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "electricBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2843,10 +3022,12 @@ export const traits: Trait[] = [
       name: "Tireless Toxicologist",
       kind: "general",
       grade: 6,
-      description: `Poison Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Poison Boost 5%`,
       effects: [
-        { stat: "poisonBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "poisonBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2854,10 +3035,12 @@ export const traits: Trait[] = [
       name: "Unceasing Pantasmist",
       kind: "general",
       grade: 6,
-      description: `Immaterial Boost 5%, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Immaterial Boost 5%`,
       effects: [
-        { stat: "immaterialBoost", type: "percent", value: 5 },
         { stat: "apRecovery", type: "percent", value: 4.5 },
+        { stat: "immaterialBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -2865,12 +3048,16 @@ export const traits: Trait[] = [
       name: "Relentless Guardian",
       kind: "general",
       grade: 6,
-      description: `Slash DEF 100, Pierce DEF 100, Crush DEF 100, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Slash DEF 100
+      Pierce DEF 100
+      Crush DEF 100`,
       effects: [
+        { stat: "apRecovery", type: "percent", value: 4.5 },
         { stat: "slashDef", type: "flat", value: 100 },
         { stat: "pierceDef", type: "flat", value: 100 },
         { stat: "crushDef", type: "flat", value: 100 },
-        { stat: "apRecovery", type: "percent", value: 4.5 },
       ],
     },
     {
@@ -2878,14 +3065,20 @@ export const traits: Trait[] = [
       name: "Tireless Rampart",
       kind: "general",
       grade: 6,
-      description: `Heat DEF 100, Cold DEF 100, Electric DEF 100, Poison DEF 100, Immaterial DEF 100, AP Recovery 4.5%`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Heat DEF 100
+      Cold DEF 100
+      Electric DEF 100
+      Poison DEF 100
+      Immaterial DEF 100`,
       effects: [
+        { stat: "apRecovery", type: "percent", value: 4.5 },
         { stat: "heatDef", type: "flat", value: 100 },
         { stat: "coldDef", type: "flat", value: 100 },
         { stat: "electricDef", type: "flat", value: 100 },
         { stat: "poisonDef", type: "flat", value: 100 },
         { stat: "immaterialDef", type: "flat", value: 100 },
-        { stat: "apRecovery", type: "percent", value: 4.5 },
       ],
     },
     {
@@ -2893,7 +3086,9 @@ export const traits: Trait[] = [
       name: "Energetic Fortress",
       kind: "general",
       grade: 6,
-      description: `AP Recovery 4.5%, All DEF 80`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      All DEF 80`,
       effects: [
         { stat: "apRecovery", type: "percent", value: 4.5 },
         { stat: "allDef", type: "flat", value: 80 },
@@ -2904,7 +3099,9 @@ export const traits: Trait[] = [
       name: "Overwhelming Skirmish",
       kind: "general",
       grade: 6,
-      description: `AP Recovery 4.5%, Knockback Resistance 25`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Knockback Resistance 25`,
       effects: [
         { stat: "apRecovery", type: "percent", value: 4.5 },
         { stat: "knockbackRes", type: "flat", value: 25 },
@@ -2915,7 +3112,9 @@ export const traits: Trait[] = [
       name: "Conspicuous Skirmish Captain",
       kind: "general",
       grade: 6,
-      description: `AP Recovery 4.5%, Aggro Adjustment 40`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Aggro Adjustment 40`,
       effects: [
         { stat: "apRecovery", type: "percent", value: 4.5 },
         { stat: "aggroAdj", type: "flat", value: 40 },
@@ -2926,7 +3125,9 @@ export const traits: Trait[] = [
       name: "Serene Skirmish Captain",
       kind: "general",
       grade: 6,
-      description: `AP Recovery 4.5%, Aggro Adjustment -40`,
+      icon: "/icons/stats/ap-buff.webp",
+      description: `AP Recovery 4.5%
+      Aggro Adjustment -40`,
       effects: [
         { stat: "apRecovery", type: "percent", value: 4.5 },
         { stat: "aggroAdj", type: "flat", value: -40 },
@@ -2937,7 +3138,9 @@ export const traits: Trait[] = [
       name: "Agile Immortal",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Evade 5%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Evade 5%`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "evade", type: "percent", value: 5 },
@@ -2948,7 +3151,9 @@ export const traits: Trait[] = [
       name: "Perceptive Immortal",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Accuracy 5%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Accuracy 5%`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "accuracy", type: "percent", value: 5 },
@@ -2959,7 +3164,9 @@ export const traits: Trait[] = [
       name: "Tenacious Gladiator",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Melee ATK 5%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Melee ATK 5%`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "meleeAtk", type: "percent", value: 5 },
@@ -2970,7 +3177,9 @@ export const traits: Trait[] = [
       name: "Tenacious Sniper",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Ranged ATK 5%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Ranged ATK 5%`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "rangedAtk", type: "percent", value: 5 },
@@ -2981,7 +3190,9 @@ export const traits: Trait[] = [
       name: "Resolute Sage",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Magic ATK 5%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Magic ATK 5%`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "magicAtk", type: "percent", value: 5 },
@@ -2992,7 +3203,9 @@ export const traits: Trait[] = [
       name: "Fleet-Footed Immortal",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, SPD 5%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      SPD 5%`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "spd", type: "percent", value: 5 },
@@ -3003,10 +3216,12 @@ export const traits: Trait[] = [
       name: "Quick-Deploying Immortal",
       kind: "general",
       grade: 6,
-      description: `Starting AP 5, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Starting AP 5`,
       effects: [
-        { stat: "startAp", type: "flat", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "startAp", type: "flat", value: 5 },
       ],
     },
     {
@@ -3014,10 +3229,12 @@ export const traits: Trait[] = [
       name: "Keen Immortal",
       kind: "general",
       grade: 6,
-      description: `Crit Rate 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Crit Rate 5%`,
       effects: [
-        { stat: "critRate", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "critRate", type: "percent", value: 5 },
       ],
     },
     {
@@ -3025,10 +3242,12 @@ export const traits: Trait[] = [
       name: "Lethal Immortal",
       kind: "general",
       grade: 6,
-      description: `Crit DMG 10%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Crit DMG 10%`,
       effects: [
-        { stat: "critDmg", type: "percent", value: 10 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "critDmg", type: "percent", value: 10 },
       ],
     },
     {
@@ -3036,10 +3255,12 @@ export const traits: Trait[] = [
       name: "Persistent Swordmaster",
       kind: "general",
       grade: 6,
-      description: `Slash Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Slash Boost 5%`,
       effects: [
-        { stat: "slashBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "slashBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3047,10 +3268,12 @@ export const traits: Trait[] = [
       name: "Enduring Master Archer",
       kind: "general",
       grade: 6,
-      description: `Pierce Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Pierce Boost 5%`,
       effects: [
-        { stat: "pierceBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "pierceBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3058,10 +3281,12 @@ export const traits: Trait[] = [
       name: "Resolute Destroyer",
       kind: "general",
       grade: 6,
-      description: `Crush Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Crush Boost 5%`,
       effects: [
-        { stat: "crushBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "crushBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3069,10 +3294,12 @@ export const traits: Trait[] = [
       name: "Tenacious Infernomancer",
       kind: "general",
       grade: 6,
-      description: `Heat Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Heat Boost 5%`,
       effects: [
-        { stat: "heatBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "heatBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3080,10 +3307,12 @@ export const traits: Trait[] = [
       name: "Tenacious Blizzard Mage",
       kind: "general",
       grade: 6,
-      description: `Cold Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Cold Boost 5%`,
       effects: [
-        { stat: "coldBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "coldBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3091,10 +3320,12 @@ export const traits: Trait[] = [
       name: "Sturdy Thunder Mage",
       kind: "general",
       grade: 6,
-      description: `Electric Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Electric Boost 5%`,
       effects: [
-        { stat: "electricBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "electricBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3102,10 +3333,12 @@ export const traits: Trait[] = [
       name: "Resilient Toxicologist",
       kind: "general",
       grade: 6,
-      description: `Poison Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Poison Boost 5%`,
       effects: [
-        { stat: "poisonBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "poisonBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3113,10 +3346,12 @@ export const traits: Trait[] = [
       name: "Persistent Phantasmist",
       kind: "general",
       grade: 6,
-      description: `Immaterial Boost 5%, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Immaterial Boost 5%`,
       effects: [
-        { stat: "immaterialBoost", type: "percent", value: 5 },
         { stat: "maxHp", type: "percent", value: 9 },
+        { stat: "immaterialBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3124,12 +3359,16 @@ export const traits: Trait[] = [
       name: "Sturdy Guardian",
       kind: "general",
       grade: 6,
-      description: `Slash DEF 100, Pierce DEF 100, Crush DEF 100, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Slash DEF 100
+      Pierce DEF 100
+      Crush DEF 100`,
       effects: [
+        { stat: "maxHp", type: "percent", value: 9 },
         { stat: "slashDef", type: "flat", value: 100 },
         { stat: "pierceDef", type: "flat", value: 100 },
         { stat: "crushDef", type: "flat", value: 100 },
-        { stat: "maxHp", type: "percent", value: 9 },
       ],
     },
     {
@@ -3137,14 +3376,20 @@ export const traits: Trait[] = [
       name: "Resilient Rampart",
       kind: "general",
       grade: 6,
-      description: `Heat DEF 100, Cold DEF 100, Electric DEF 100, Poison DEF 100, Immaterial DEF 100, Max HP 9%`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Heat DEF 100
+      Cold DEF 100
+      Electric DEF 100
+      Poison DEF 100
+      Immaterial DEF 100`,
       effects: [
+        { stat: "maxHp", type: "percent", value: 9 },
         { stat: "heatDef", type: "flat", value: 100 },
         { stat: "coldDef", type: "flat", value: 100 },
         { stat: "electricDef", type: "flat", value: 100 },
         { stat: "poisonDef", type: "flat", value: 100 },
         { stat: "immaterialDef", type: "flat", value: 100 },
-        { stat: "maxHp", type: "percent", value: 9 },
       ],
     },
     {
@@ -3152,7 +3397,9 @@ export const traits: Trait[] = [
       name: "Unfallen Fortress",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, All DEF 80`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      All DEF 80`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "allDef", type: "flat", value: 80 },
@@ -3163,7 +3410,9 @@ export const traits: Trait[] = [
       name: "Overwhelming Immortal",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Knockback Resistance 25`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Knockback Resistance 25`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "knockbackRes", type: "flat", value: 25 },
@@ -3174,7 +3423,9 @@ export const traits: Trait[] = [
       name: "Menacing Immortal",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Aggro Adjustment 40`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Aggro Adjustment 40`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "aggroAdj", type: "flat", value: 40 },
@@ -3185,7 +3436,9 @@ export const traits: Trait[] = [
       name: "Serene Immortal",
       kind: "general",
       grade: 6,
-      description: `Max HP 9%, Aggro Adjustment -40`,
+      icon: "/icons/stats/hp-buff.webp",
+      description: `Max HP 9%
+      Aggro Adjustment -40`,
       effects: [
         { stat: "maxHp", type: "percent", value: 9 },
         { stat: "aggroAdj", type: "flat", value: -40 },
@@ -3196,10 +3449,12 @@ export const traits: Trait[] = [
       name: "Swift Divine Archer",
       kind: "general",
       grade: 6,
-      description: `Accuracy 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Accuracy 5%`,
       effects: [
-        { stat: "accuracy", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "accuracy", type: "percent", value: 5 },
       ],
     },
     {
@@ -3207,10 +3462,12 @@ export const traits: Trait[] = [
       name: "Swift Gladiator",
       kind: "general",
       grade: 6,
-      description: `Melee ATK 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Melee ATK 5%`,
       effects: [
-        { stat: "meleeAtk", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "meleeAtk", type: "percent", value: 5 },
       ],
     },
     {
@@ -3218,10 +3475,12 @@ export const traits: Trait[] = [
       name: "Swift Sniper",
       kind: "general",
       grade: 6,
-      description: `Ranged ATK 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Ranged ATK 5%`,
       effects: [
-        { stat: "rangedAtk", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "rangedAtk", type: "percent", value: 5 },
       ],
     },
     {
@@ -3229,10 +3488,12 @@ export const traits: Trait[] = [
       name: "Dancing Sage",
       kind: "general",
       grade: 6,
-      description: `Magic ATK 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Magic ATK 5%`,
       effects: [
-        { stat: "magicAtk", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "magicAtk", type: "percent", value: 5 },
       ],
     },
     {
@@ -3240,7 +3501,9 @@ export const traits: Trait[] = [
       name: "Agile Shadow",
       kind: "general",
       grade: 6,
-      description: `Evade 9%, SPD 5%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      SPD 5%`,
       effects: [
         { stat: "evade", type: "percent", value: 9 },
         { stat: "spd", type: "percent", value: 5 },
@@ -3251,10 +3514,12 @@ export const traits: Trait[] = [
       name: "Swift Assault Captain",
       kind: "general",
       grade: 6,
-      description: `Starting AP 5, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Starting AP 5`,
       effects: [
-        { stat: "startAp", type: "flat", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "startAp", type: "flat", value: 5 },
       ],
     },
     {
@@ -3262,10 +3527,12 @@ export const traits: Trait[] = [
       name: "Dancing Fixer",
       kind: "general",
       grade: 6,
-      description: `Crit Rate 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Crit Rate 5%`,
       effects: [
-        { stat: "critRate", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "critRate", type: "percent", value: 5 },
       ],
     },
     {
@@ -3273,10 +3540,12 @@ export const traits: Trait[] = [
       name: "Flexible Arbiter",
       kind: "general",
       grade: 6,
-      description: `Crit DMG 10%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Crit DMG 10%`,
       effects: [
-        { stat: "critDmg", type: "percent", value: 10 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "critDmg", type: "percent", value: 10 },
       ],
     },
     {
@@ -3284,10 +3553,12 @@ export const traits: Trait[] = [
       name: "Agile Swordmaster",
       kind: "general",
       grade: 6,
-      description: `Slash Boost 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Slash Boost 5%`,
       effects: [
-        { stat: "slashBoost", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "slashBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3295,10 +3566,12 @@ export const traits: Trait[] = [
       name: "Flexible Master Archer",
       kind: "general",
       grade: 6,
-      description: `Pierce Boost 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Pierce Boost 5%`,
       effects: [
-        { stat: "pierceBoost", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "pierceBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3306,10 +3579,12 @@ export const traits: Trait[] = [
       name: "Dancing Destroyer",
       kind: "general",
       grade: 6,
-      description: `Crush Boost 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Crush Boost 5%`,
       effects: [
-        { stat: "crushBoost", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "crushBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3317,10 +3592,12 @@ export const traits: Trait[] = [
       name: "Swift Infernomancer",
       kind: "general",
       grade: 6,
-      description: `Heat Boost 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Heat Boost 5%`,
       effects: [
-        { stat: "heatBoost", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "heatBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3328,10 +3605,12 @@ export const traits: Trait[] = [
       name: "Swift Blizzard Mage",
       kind: "general",
       grade: 6,
-      description: `Cold Boost 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Cold Boost 5%`,
       effects: [
-        { stat: "coldBoost", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "coldBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3339,10 +3618,12 @@ export const traits: Trait[] = [
       name: "Nimble Thunder Mage",
       kind: "general",
       grade: 6,
-      description: `Electric Boost 5%, Evade 9%`,
+      icon: "/icons/stats/evade-buff.webp",
+      description: `Evade 9%
+      Electric Boost 5%`,
       effects: [
-        { stat: "electricBoost", type: "percent", value: 5 },
         { stat: "evade", type: "percent", value: 9 },
+        { stat: "electricBoost", type: "percent", value: 5 },
       ],
     },
     {
@@ -3350,6 +3631,7 @@ export const traits: Trait[] = [
       name: "Flexible Toxicologist",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Poison Boost 5%, Evade 9%`,
       effects: [
         { stat: "poisonBoost", type: "percent", value: 5 },
@@ -3361,6 +3643,7 @@ export const traits: Trait[] = [
       name: "Wind-Swift Pantasmist",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Immaterial Boost 5%, Evade 9%`,
       effects: [
         { stat: "immaterialBoost", type: "percent", value: 5 },
@@ -3372,6 +3655,7 @@ export const traits: Trait[] = [
       name: "Nimble Guardian",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Slash DEF 100, Pierce DEF 100, Crush DEF 100, Evade 9%`,
       effects: [
         { stat: "slashDef", type: "flat", value: 100 },
@@ -3385,6 +3669,7 @@ export const traits: Trait[] = [
       name: "Gliding Rampart",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Heat DEF 100, Cold DEF 100, Electric DEF 100, Poison DEF 100, Immaterial DEF 100, Evade 9%`,
       effects: [
         { stat: "heatDef", type: "flat", value: 100 },
@@ -3400,6 +3685,7 @@ export const traits: Trait[] = [
       name: "Wind-Swift Fortress",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Evade 9%, All DEF 80`,
       effects: [
         { stat: "evade", type: "percent", value: 9 },
@@ -3411,6 +3697,7 @@ export const traits: Trait[] = [
       name: "Overwhelming Shadow",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Evade 9%, Knockback Resistance 25`,
       effects: [
         { stat: "evade", type: "percent", value: 9 },
@@ -3422,6 +3709,7 @@ export const traits: Trait[] = [
       name: "Provocative Shadow",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Evade 9%, Aggro Adjustment 40`,
       effects: [
         { stat: "evade", type: "percent", value: 9 },
@@ -3433,6 +3721,7 @@ export const traits: Trait[] = [
       name: "Quiet Shadow",
       kind: "general",
       grade: 6,
+      icon: "/icons/stats/evade-buff.webp",
       description: `Evade 9%, Aggro Adjustment -40`,
       effects: [
         { stat: "evade", type: "percent", value: 9 },

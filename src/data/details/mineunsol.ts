@@ -21,7 +21,6 @@ export const min_eun_sol: CharacterDetails = {
       name: "Dress of Everlasting Devotion",
       portrait: "/characters/mineunsol/mineunsol-s2p.webp",
       fullBody: "/characters/mineunsol/mineunsol-s2.webp",
-      fullBodyCensored: "/characters/mineunsol/mineunsol-s2c.webp",
       sources: [
         {
           type: "shop",

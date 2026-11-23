@@ -283,7 +283,7 @@ export const echidna: CharacterDetails = {
     "distroted-wish",
     "do-not-touch",
     "elemental-of-magic",
-    "interested-magic",
+    "interested-accuracy",
     "doom",
     "venomous",
     "uncanny",
