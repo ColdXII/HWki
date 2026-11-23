@@ -272,9 +272,9 @@ export const ines: CharacterDetails = {
       name: "Blade of Genesis",
       icon: "/skills/ines/blade-of-genesis.webp",
       description: `During battle, ATK increases by {atk}%, and Crit DMG increases by {critDmg}%.
-      When performing a Weakness Attack, restores 1 Counterattack.
+      When performing a Weak Point Attack, restores 1 Counterattack.
       
-      After using [Dividing the Earth], if the target survives, performs an additional Reactions with [World Cleaver].`,
+      After using [Dividing the Earth], if the target survives, performs an additional Reactions with [World Cleaver] toward the greatest number of enemies.`,
       values: {
         atk: [40, 45, 50, 55, 60, 65, 70],
         critDmg: [20, 24, 28, 32, 36, 40, 44],

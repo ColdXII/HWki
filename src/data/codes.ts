@@ -14,6 +14,22 @@ export type RedeemCode = {
 // Newest first is nice, but the page sorts them anyway
 export const codes: RedeemCode[] = [
   {
+    code: "in100HWDR",
+    expires: "2026-12-31",
+    rewards: [
+      { name: "EX Rank Contract Ticket", amount: 1 },
+      { name: "SS Rank Contract Ticket", amount: 1 },
+    ],
+  },
+  {
+    code: "in100HWDRe",
+    expires: "2026-12-31",
+    rewards: [
+      { name: "EX Rank Contract Ticket", amount: 1 },
+      { name: "SS Rank Contract Ticket", amount: 1 },
+    ],
+  },
+  {
     code: "26HAPPYHW",
     expires: "2026-11-30",
     rewards: [

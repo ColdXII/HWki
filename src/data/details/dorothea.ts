@@ -4,7 +4,7 @@ export const dorothea: CharacterDetails = {
   skins: [
     {
       id: "dorothea-s1",
-      name: "Torta Traditional Costume",
+      name: "Dressed for Desire",
       portrait: "/characters/dorothea/dorothea-s1p.webp",
       fullBody: "/characters/dorothea/dorothea-s1.webp",
       fullBodyCensored: "/characters/dorothea/dorothea-s1c.webp",
@@ -18,12 +18,12 @@ export const dorothea: CharacterDetails = {
       pv: [
         {
           source: "youtube",
-          url: "https://youtu.be/sbH5wpony8s",
+          url: "https://youtube.com/shorts/AFgZvwKjTxE",
           title: "Official PV",
         },
         {
           source: "x",
-          url: "https://x.com/_horizonwalker/status/1881644338788417683",
+          url: "https://x.com/_horizonwalker/status/2121136260857409925",
           title: "X PV",
         },
       ],
@@ -192,7 +192,6 @@ export const dorothea: CharacterDetails = {
       description: `Swings a deadly Torturas to deal Slash DMG equal to {damage}% of Melee ATK to the enemy.
       
       [Domain of the Cursed Tree: Blood Eagle]
-      ONLY SCALE WITH [Domain of the Cursed Tree] SKILL
       
       [Opening Lariat]:
       Channels strength into the arm to deliver a powerful lariat.
@@ -247,7 +246,6 @@ export const dorothea: CharacterDetails = {
       If the target is a large enemy, instead of pulling them closer, moves self to the front of the enemy.
       
       [Domain of the Cursed Tree: Blood Eagle]
-      ONLY SCALE WITH [Domain of the Cursed Tree] SKILL
       
       [Soul Shock]:
       Snatches the souls of enemies.
@@ -313,7 +311,12 @@ export const dorothea: CharacterDetails = {
       Deals Crush DMG equal to {damage2}% of Melee ATK. Then deals Additional Crush DMG equal to {damage2}% of Melee ATK and pushes enemies back.
       
       [Curse Reaping]:
-      Ends the effects of [Domain of the Cursed Tree] and [Blood Eagle].`,
+      Ends the effects of [Domain of the Cursed Tree] and [Blood Eagle].
+      
+      [SIGNATURE WEAPON EFFECT]:
+      At the start of any unit's turn, applies [Soul-Shackling Curse] to enemies affected by [Blood Curse] for 3R.
+
+      - [Soul-Shackling Curse]: Reduces Crush DEF by 200. Stacks up to 10 times.`,
       damage: [
         {
           stat: "meleeAtk",
@@ -384,17 +387,32 @@ export const dorothea: CharacterDetails = {
     height: "188cm",
     birthday: "October 14th",
     bwh: "122(P)-65-128",
-    story: `.`,
+    story: `Dorothea is one of the few shamans among the Tortans, a race renowned for their formidable warriors.
+
+    Tortan shamans are chosen from among the tribe's warriors for their exceptional talent in sorcery. Blessed with both extraordinary physical strength and a natural gift for magic, Dorothea was overjoyed when she was selected to become a shaman. However, that joy quickly turned to despair when she learned the price of her newfound power: a curse that would prevent her from ever continuing her own bloodline.
+
+    Perhaps it was the frustration of knowing she would grow old without ever marrying. Or perhaps it was the spirits of her shaman ancestors, who appeared whenever she practiced sorcery and threw hysterical fits over their own eternal spinsterhood. Whatever the cause, Dorothea's once merely mischievous personality gradually twisted into something far more unpleasant.
+
+    Her increasingly unbearable temperament eventually drove the rest of her tribe to keep their distance.
+
+    Even as the Day of Destruction approached, Dorothea remained deep in the remote Arctic reaches of the Noctis Nebula, summoning her ancestral spirits in a desperate attempt to negotiate her way out of the marriage curse. It was only much later that she discovered her tribe had abandoned her. With nothing but a note left behind by Osla, her niece and one of the few relatives who still cared enough to look out for her, Dorothea set off in search of an escape Rift. Along the way, she miraculously encountered Everette and her Highland Elves, eventually making her way to Earth alongside them.
+
+    Upon arriving on Earth, Dorothea was delighted to discover that the presence of her ancestral spirits had vanished. Believing herself finally free of their interference, she wasted no time throwing herself into the search for a husband. Her newfound enthusiasm was short-lived, however. When she heard that Osla, who had sworn the very same oath as Dorothea, had somehow managed to get married, she immediately set off for the Federation.`,
     pv: [
       {
         source: "youtube",
-        url: "https://www.youtube.com/shorts/noG4OAgPeXU",
-        title: "Ads PV 1",
+        url: "https://youtu.be/ZivrtC2ZNIk",
+        title: "Official PV",
       },
       {
         source: "youtube",
-        url: "https://www.youtube.com/shorts/arfTAeXwuxs",
-        title: "Ads PV 2",
+        url: "https://x.com/_horizonwalker/status/2121136260857409925",
+        title: "X PV",
+      },
+      {
+        source: "x",
+        url: "https://x.com/_horizonwalker/status/2121136491095359877",
+        title: "Affection PV",
       },
     ],
   },

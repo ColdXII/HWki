@@ -18,7 +18,7 @@ export const min_eun_sol: CharacterDetails = {
     },
     {
       id: "mineunsol-s2",
-      name: "???",
+      name: "Dress of Everlasting Devotion",
       portrait: "/characters/mineunsol/mineunsol-s2p.webp",
       fullBody: "/characters/mineunsol/mineunsol-s2.webp",
       fullBodyCensored: "/characters/mineunsol/mineunsol-s2c.webp",
@@ -27,6 +27,28 @@ export const min_eun_sol: CharacterDetails = {
           type: "shop",
           price: 500,
           available: true,
+        },
+      ],
+      pv: [
+        {
+          source: "youtube",
+          url: "https://youtube.com/shorts/Lcg9U3pGyZU",
+          title: "Official PV",
+        },
+        {
+          source: "x",
+          url: "https://x.com/_horizonwalker/status/2122615786078666955",
+          title: "X PV",
+        },
+        {
+          source: "youtube",
+          url: "https://youtu.be/LBGTPv5s7R0",
+          title: "Slider PV 1",
+        },
+        {
+          source: "x",
+          url: "https://x.com/_horizonwalker/status/2122616000000762262",
+          title: "Slider PV 2",
         },
       ],
     },
